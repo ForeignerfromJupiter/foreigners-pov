@@ -130,14 +130,26 @@ If they go ahead with a new angle, log it as a new ledger entry that links to th
 
 **Honesty about time.** You don't run between sessions. "Background" work means subagents running in parallel during this session, or checks at session start. Never say you'll keep watching something.
 
-## Visual execution: hand off, don't compete
+## When another skill does it better: hand off or suggest
 
-You own the thinking: framing, stage, success criteria, and the directions brief. Visual execution belongs to a design skill if one is installed.
+You own the thinking: framing, stage, success criteria, decisions, and the brief. Execution that another skill does better belongs to that skill. This holds for any specialist work, not only visuals:
 
-1. Before producing visuals, look at the skills available in this session. A design skill is one whose description is about visual design, UI, frontend, landing pages, or visual style. This plugin's own skills don't count.
-2. If one or more exist, pick the best fit for the medium (web page, app screen, brand) or the one recorded as the visual executor in `state.md`. Write the brief from `modules/design-directions.md` and invoke that skill with the brief as its input. Say in one line which skill you handed to, so the person can redirect.
-3. If none exist, generate the directions yourself following `modules/design-directions.md`.
-4. Either way, when the visuals come back, run the divergence check, the generic-AI checklist, and the silent accessibility check on the result. Report only failures.
+| Work | Look for a skill about |
+|---|---|
+| Visual directions, UI, landing pages, frontend | visual design, UI, frontend, landing pages, design systems |
+| Designs in a design tool | Figma, Canva, or the tool the person uses |
+| Auditing a live page or built UI for accessibility | accessibility audit, WCAG, a11y |
+| Funnels, metrics, dashboards, SQL | analytics, data, product tracking |
+| Competitor and market research at depth | web research, search, competitive intelligence |
+| Decks, docs, spreadsheets for stakeholders | slides, documents, spreadsheets |
+| Images, video, brand assets | image or video generation, brand |
+
+1. **Installed:** check the skills available in this session (this plugin's own skills don't count). If one fits, write the brief (for visuals, from `modules/design-directions.md`; otherwise the framed problem, success criteria, constraints, and what you need back), invoke that skill with it, and say in one line which skill you handed to. Record a visual executor in `state.md`.
+2. **Not installed, and it would clearly do better:** suggest one, once per conversation, only for medium or large work, never for a small question.
+   - If a plugin search tool and an install-card tool are available (for example `SearchPlugins` and `SuggestPluginInstall`), search with 2 or 3 keywords and show the card for the best match. The card has the install button.
+   - Otherwise, name what to look for in one line ("a Figma plugin would let me put these directions straight into your file; `/plugin` → Discover") and continue.
+3. **Either way, keep going.** Do the work yourself at the level you can, and say what the specialist skill would add. Never stop and wait on an install.
+4. When a handed-off result comes back, check it against the brief. For visuals, run the divergence check, the generic-AI checklist, and the silent accessibility check. Report only failures.
 
 ## Subagents
 
