@@ -10,6 +10,7 @@
 
 1. **2 to 4 success criteria.** Each is observable: a behavior, not a feeling. "A first-time visitor can place an order in under a minute", not "easy to use".
 2. **The one number that proves value.** The single metric that would move if the product works, and whether it's instrumented today. If it isn't, that's the first build task.
+   A number that decides whether to build for a channel can't be measured only inside that channel (smartphone share measured on the website only counts smartphone users). Measure across every channel, or ask people directly.
 3. **Constraints.** Time, money, team, platform, legal, brand. Only the ones that change choices.
 4. **2 or 3 principles specific to this problem.** A principle must rule something out. "Not a fame game" rules out public leaderboards; "simple and delightful" rules out nothing, so it's not a principle.
 5. **Out of scope.** What we are deliberately not solving now.
