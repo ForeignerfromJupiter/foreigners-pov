@@ -1,0 +1,15 @@
+{
+  "name": "foreignerfromjupiter",
+  "description": "Plugins by Ashik (Foreigner From Jupiter)",
+  "owner": {
+    "name": "Ashik",
+    "url": "https://www.foreignerfromjupiter.com/"
+  },
+  "plugins": [
+    {
+      "name": "design-founder",
+      "source": "./",
+      "description": "Stage-aware designer-founder partner: reframe, dissect, define good, converge, stress test, pre-flight, retro, with a project brain that remembers killed ideas."
+    }
+  ]
+}

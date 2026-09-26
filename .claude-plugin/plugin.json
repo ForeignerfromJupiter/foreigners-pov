@@ -1,0 +1,14 @@
+{
+  "name": "design-founder",
+  "displayName": "Design Founder",
+  "version": "0.1.0",
+  "description": "A designer-founder partner that takes you from a vague idea or stakeholder ask to a shipped product, applying the right thinking at the right stage and remembering what was decided, killed, and why.",
+  "author": {
+    "name": "Ashik",
+    "url": "https://www.foreignerfromjupiter.com/"
+  },
+  "homepage": "https://github.com/ForeignerfromJupiter/design-founder",
+  "repository": "https://github.com/ForeignerfromJupiter/design-founder",
+  "license": "MIT",
+  "keywords": ["product-design", "ux", "design-thinking", "founder", "product-management", "accessibility"]
+}
