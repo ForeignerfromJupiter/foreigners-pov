@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Builds dist/design-founder.zip: the router skill with its modules, brain templates,
 # and cases, in the folder layout Claude.ai expects for an uploaded skill.
+# Attach the result to a GitHub release; it is not committed to the repo.
 set -euo pipefail
 
 root="$(cd "$(dirname "$0")/.." && pwd)"

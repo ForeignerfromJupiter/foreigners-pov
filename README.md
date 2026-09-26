@@ -35,7 +35,7 @@ Start a new session (or run `/reload-plugins`) and describe a product problem. Y
 
 The router skill works on its own, without the commands, agents, or hook.
 
-- **Claude.ai:** download [`dist/design-founder.zip`](dist/design-founder.zip), then upload it under Skills in Claude.ai's settings. Without a file system, Claude keeps the project brain in the conversation and offers the files when you want to save them.
+- **Claude.ai:** download [`design-founder.zip`](https://github.com/ForeignerfromJupiter/design-founder/releases/latest/download/design-founder.zip) from the latest release, then upload it under Skills in Claude.ai's settings. Without a file system, Claude keeps the project brain in the conversation and offers the files when you want to save them.
 - **Claude Code, skill only:**
 
 ```bash
