@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Installs the design-founder skill (router, modules, brain templates, cases) into
-# ~/.claude/skills/design-founder, without the plugin's commands, agents, or hook.
+# ~/.claude/skills/design-founder (or $CLAUDE_CONFIG_DIR/skills), without the plugin's commands, agents, or hook.
 #
 #   curl -fsSL https://raw.githubusercontent.com/ForeignerfromJupiter/design-founder/main/install.sh | bash
 #
@@ -9,7 +9,8 @@ set -euo pipefail
 
 repo="ForeignerfromJupiter/design-founder"
 branch="main"
-dest="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}/design-founder"
+config="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+dest="${CLAUDE_SKILLS_DIR:-$config/skills}/design-founder"
 src=""
 
 while [ $# -gt 0 ]; do
@@ -19,8 +20,8 @@ while [ $# -gt 0 ]; do
   esac
 done
 
-if [ -f "$HOME/.claude/plugins/installed_plugins.json" ] &&
-   grep -q '"design-founder@' "$HOME/.claude/plugins/installed_plugins.json"; then
+if [ -f "$config/plugins/installed_plugins.json" ] &&
+   grep -q '"design-founder@' "$config/plugins/installed_plugins.json"; then
   echo "The design-founder plugin is already installed. It includes this skill, so you don't need both."
   echo "To switch to the skill only, run: claude plugin uninstall design-founder"
   exit 0
