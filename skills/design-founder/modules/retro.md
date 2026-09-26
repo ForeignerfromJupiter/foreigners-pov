@@ -11,7 +11,7 @@
 ## Steps
 
 1. Pull the success criteria and the one number from `state.md`.
-2. For each: expected vs actual. If actual is unknown, the missing measurement is the first finding.
+2. For each: expected vs actual. If an analytics or data tool is connected, pull the actuals yourself (read-only) and say which query you ran. If actual is unknown, the missing measurement is the first finding.
 3. Before explaining a miss with design, check the plumbing: tracking, providers, delivery, latency, platform splits (router rule 7).
 4. Separate what was learned from what was guessed. A reason is a learning only if evidence backs it.
 5. Update the ledger:

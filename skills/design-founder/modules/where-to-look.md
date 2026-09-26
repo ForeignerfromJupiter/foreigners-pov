@@ -22,6 +22,8 @@
 
 ## When a metric broke
 
+If an analytics or data tool is connected, pull these yourself (read-only) before asking anyone; name the tool and query.
+
 Check the plumbing first (router rule 7), then look here:
 - Funnel by step, split by platform, OS version, country, carrier or provider, app version.
 - Session recordings of people who dropped at the step.

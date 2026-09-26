@@ -15,7 +15,7 @@
    - `assumption`: a belief. Say what would confirm it.
 4. **Rank** by impact (how much the motive matters when unmet) times frequency (how often it happens). High/medium/low is enough.
 5. **Mark scope**: must-solve, should-solve, out of scope. Must-solve is at most three items.
-6. Flag the highest-ranked assumption. It is a candidate for the riskiest assumption later.
+6. Flag the highest-ranked assumption. If it's about what people do or why, `user-research.md` is the next step. It is a candidate for the riskiest assumption later.
 
 ## Output shape
 

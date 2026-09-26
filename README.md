@@ -29,7 +29,7 @@ claude plugin marketplace add ForeignerfromJupiter/design-founder
 claude plugin install design-founder@foreignerfromjupiter
 ```
 
-Start a new session (or run `/reload-plugins`) and describe a product problem. You get the router skill, eight commands, four subagents, and two small hooks (see [What it runs](#what-it-runs)).
+Start a new session (or run `/reload-plugins`) and describe a product problem. You get the router skill, ten commands, four subagents, and two small hooks (see [What it runs](#what-it-runs)).
 
 ### Standalone skill (Claude.ai and other surfaces)
 
@@ -83,6 +83,8 @@ Each command is also something you can just ask for in plain words. In Claude Co
 | `/design-founder:ledger` | Show or search shipped, killed, parked, and testing ideas |
 | `/design-founder:retro` | Compare a launch to its success criteria and update the ledger |
 | `/design-founder:directions` | Write a directions brief and get 2 or 3 genuinely different visual directions |
+| `/design-founder:research` | Plan interviews to test an assumption (who, questions, what would change your mind), or synthesize notes |
+| `/design-founder:launch` | Pre-launch checklist: measurement on every platform, store rules, remote switches, real devices, day-1 and week-1 checks |
 
 ## The rules
 
@@ -101,7 +103,7 @@ It also covers three weak spots on purpose: converging instead of endlessly expa
 
 ## How it decides what to show
 
-Before acting, the router reads the **stage** (idea, discovery, definition, solution, design, build, launch, post-launch) and the **size** (small, medium, large). Each of its 16 modules has a trigger and a condition for staying quiet: a war room needs a concrete concept, viability needs real running cost, harm checks need location, money, health, minors, user content, or gamification.
+Before acting, the router reads the **stage** (idea, discovery, definition, solution, design, build, launch, post-launch) and the **size** (small, medium, large). Each of its 18 modules has a trigger and a condition for staying quiet: a war room needs a concrete concept, viability needs real running cost, harm checks need location, money, health, minors, user content, or gamification.
 
 - **At most 3 questions per turn**, each with a likely answer, so you can reply "yes" or "yes, except 2".
 - **Three checkpoints:** after framing, after defining success, and before committing to build.
@@ -145,6 +147,7 @@ Everything runs locally. The plugin sends nothing anywhere on its own.
 - **Session-start hook** (`scripts/session-start.sh`): if the project has `.designfounder/`, prints the stage, parked items, and killed-idea index into Claude's context. Otherwise prints nothing.
 - **Prompt hook** (`scripts/prompt-router.sh`): checks each prompt you send for product and design phrasing (for example "landing page", "switch or checkbox", "onboarding", "launch", "rule builder") and, only on a match, adds one line asking Claude to use the design-founder skill. Nothing is stored or sent. It exists because smaller models with many skills installed often skip skills; with it, Haiku uses the router reliably. To turn it off, set `DESIGN_FOUNDER_NO_PROMPT_HOOK=1` in your environment.
 - **Researcher agent**: uses web search and fetch, only when you say yes to research.
+- **Analytics**: if you've connected an analytics or data tool (PostHog, Mixpanel, Amplitude, a warehouse), the metric-drop and retro flows read from it, read-only, and say which query they ran. It never changes tracking or data.
 - **Skills** read and write files in `.designfounder/` in your project.
 
 ## Contributing
