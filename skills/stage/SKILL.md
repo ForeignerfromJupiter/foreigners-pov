@@ -2,6 +2,7 @@
 name: stage
 description: "Show the project's current stage, size, success criteria, parked items due now, and the next checkpoint."
 disable-model-invocation: true
+allowed-tools: Read Glob Grep
 ---
 
 Read `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.

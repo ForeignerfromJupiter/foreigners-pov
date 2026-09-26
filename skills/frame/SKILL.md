@@ -3,6 +3,7 @@ name: frame
 description: "Frame a problem: reframe it, then dissect it by motive."
 disable-model-invocation: true
 argument-hint: [problem or ask]
+allowed-tools: Read Glob Grep
 ---
 
 Read `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
