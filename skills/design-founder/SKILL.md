@@ -1,6 +1,6 @@
 ---
 name: design-founder
-description: Designer-founder partner for product and design decisions, from a vague idea or stakeholder ask to a shipped product and a post-launch retro. Use when someone brings a product idea, a feature request, a metric that dropped, a UI choice (component, flow, screen, states), a landing page or visual direction to set, a backlog to vet, or asks to frame, scope, stress test, prioritize, or review a launch. Stage-aware: applies reframing, dissecting by motive, success criteria, converging, riskiest assumption, harm and accessibility checks only when they change a decision. Keeps a project brain in .designfounder/ with decisions and killed ideas plus their revive conditions. For visual work it sets the brief and hands execution to an installed design skill. Not for pure coding tasks with no product or design decision in them.
+description: "Designer-founder partner for product and design decisions, from a vague idea or stakeholder ask to a shipped product and a post-launch retro. Use when someone brings a product idea, a feature request, a metric that dropped, a UI choice (component, flow, screen, states), a landing page or visual direction to set, a backlog to vet, or asks to frame, scope, stress test, prioritize, or review a launch. Stage-aware: applies reframing, dissecting by motive, success criteria, converging, riskiest assumption, harm and accessibility checks only when they change a decision. Keeps a project brain in .designfounder/ with decisions and killed ideas plus their revive conditions. For visual work it sets the brief and hands execution to an installed design skill. Not for pure coding tasks with no product or design decision in them."
 license: MIT
 ---
 
@@ -131,7 +131,7 @@ You own the thinking: framing, stage, success criteria, and the directions brief
 
 ## Subagents
 
-When this plugin's agents are available, use them for parallel or independent work:
+When this plugin's agents are available (in Claude Code they're named `design-founder:researcher` and so on), use them for parallel or independent work:
 
 - `researcher`: competitor ceilings, analog industries, review and forum mining. Give it the framed problem and the specific questions.
 - `war-room`: stakeholder objections and the pre-mortem. Give it the concept, success criteria, and principles, not the whole conversation, so its voices aren't anchored to your view.
