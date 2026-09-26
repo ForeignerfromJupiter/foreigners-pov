@@ -29,7 +29,7 @@ claude plugin marketplace add ForeignerfromJupiter/design-founder
 claude plugin install design-founder@foreignerfromjupiter
 ```
 
-Start a new session (or run `/reload-plugins`) and describe a product problem. You get the router skill, eight commands, four subagents, and the session-start hook.
+Start a new session (or run `/reload-plugins`) and describe a product problem. You get the router skill, eight commands, four subagents, and two small hooks (see [What it runs](#what-it-runs)).
 
 ### Standalone skill (Claude.ai and other surfaces)
 
@@ -137,6 +137,15 @@ Worked examples that show the reasoning chain: the surface ask, the hidden sub-p
 - [A Reason To Stop](skills/design-founder/cases/a-reason-to-stop.md): from an offline travel app to daily discovery, with the loophole and the trust layer.
 
 The cases come from the work of Ashik ([foreignerfromjupiter.com](https://www.foreignerfromjupiter.com/)), anonymized, with no metrics.
+
+## What it runs
+
+Everything runs locally. The plugin sends nothing anywhere on its own.
+
+- **Session-start hook** (`scripts/session-start.sh`): if the project has `.designfounder/`, prints the stage, parked items, and killed-idea index into Claude's context. Otherwise prints nothing.
+- **Prompt hook** (`scripts/prompt-router.sh`): checks each prompt you send for product and design phrasing (for example "landing page", "switch or checkbox", "onboarding", "launch", "rule builder") and, only on a match, adds one line asking Claude to use the design-founder skill. Nothing is stored or sent. It exists because smaller models with many skills installed often skip skills; with it, Haiku uses the router reliably. To turn it off, set `DESIGN_FOUNDER_NO_PROMPT_HOOK=1` in your environment.
+- **Researcher agent**: uses web search and fetch, only when you say yes to research.
+- **Skills** read and write files in `.designfounder/` in your project.
 
 ## Contributing
 
