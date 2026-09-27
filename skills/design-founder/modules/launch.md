@@ -33,7 +33,10 @@ Adapt each line to this product; skip what doesn't apply and say why in one line
 
 ## How to report
 
-Lead with anything that blocks the release (a store rule, no reviewer access, a metric that can't be measured). Then the checklist as done / to do / accepted risk. Keep it to what this product needs.
+Keep the reply under about 350 words:
+1. **The 3 things most likely to block or sink this launch,** specific to this product, each with the fix.
+2. **The rest as one-line checklist items,** only the ones this product needs.
+3. **Offer the full checklist as a file** (for example `docs/launch-checklist.md`) instead of writing it all in the reply.
 
 ## What you can do yourself
 

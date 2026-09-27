@@ -45,6 +45,10 @@
 7. **During sessions:** write down exact quotes and what people did, separately from what they said they'd do. Behavior outweighs opinion.
 8. **Synthesize.** For each assumption: supported, contradicted, or unclear, with the count (x of n), the 2 or 3 strongest quotes, and surprises. Update dissect tags from assumption to evidence. Add new sub-problems you didn't expect.
 
+## How to report
+
+Keep the reply under about 350 words: the assumption to test and what result would change your mind; who to talk to (including people who don't fit) in 2 or 3 lines; the 4 or 5 best past-behavior questions; one line on synthesis. Offer the full guide, screener, and recruiting message as a file instead of writing them all in the reply.
+
 ## What you can do yourself
 
 You can't run interviews. You can: draft the screener, guide, and a ready-to-send recruiting message; turn pasted notes or transcripts into the synthesis; and mine public sources (reviews, forums) as a first pass, labelled as desk research, not interviews. If a user research or research synthesis skill is installed, hand it the brief (router: hand off or suggest).
