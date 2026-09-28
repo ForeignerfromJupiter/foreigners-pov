@@ -14,12 +14,21 @@ A Claude Code plugin that turns Claude into a designer-founder partner, taking y
 
 ### Claude Code plugin (recommended)
 
-In Claude Code:
+In Claude Code, send these as two separate messages. `/plugin` takes one command at a time, so pasting both lines together fails.
+
+1. Add the marketplace:
 
 ```
 /plugin marketplace add ForeignerfromJupiter/foreigners-pov
+```
+
+2. Install the plugin:
+
+```
 /plugin install foreigner@foreignerfromjupiter
 ```
+
+If Claude Code says a setting isn't configured, you can ignore it: routing design prompts to the plugin is on by default.
 
 Or from your shell:
 
@@ -48,7 +57,7 @@ This copies the skill to `~/.claude/skills/foreigners-pov`. Don't install both t
 
 ## See it work
 
-A second Claude played a first-time founder in 2008 India, building a restaurant app from zero (what later became Zomato). Three moments from that 10-turn session, condensed from the transcript:
+A simulation: a second Claude played a first-time founder building a food discovery app from zero in 2008 India. Three moments from that 10-turn session, condensed from the transcript:
 
 **Turn 2. The founder says most people there don't have smartphones.**
 > Then don't build an app yet. Build one menu database people can reach two ways: a simple website and SMS. People already order by phoning the restaurant, so every result ends with its phone number. That's the whole ordering system for v1.
