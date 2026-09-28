@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
-# foreigners-pov UserPromptSubmit hook.
+# Foreigner's POV UserPromptSubmit hook.
 # When a prompt reads like a product or design decision, adds one line asking Claude
 # to use the foreigners-pov skill first. Prints nothing for any other prompt.
 # Smaller models with many skills installed often skip skills; this makes routing reliable.
+# Reads only the prompt from stdin. Stores and sends nothing. Plain bash and grep.
 
 [ -n "${FOREIGNERS_POV_NO_PROMPT_HOOK:-}${DESIGN_FOUNDER_NO_PROMPT_HOOK:-}" ] && exit 0
 
 input="$(cat)"
 
-# Pull out only the prompt text, so paths and ids in the payload can't match.
-if command -v python3 >/dev/null 2>&1; then
-  prompt="$(printf '%s' "$input" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("prompt",""))' 2>/dev/null)"
+# Pull out only the prompt text, so paths and ids elsewhere in the payload can't match.
+prompt_field='"prompt"[[:space:]]*:[[:space:]]*"(([^"\\]|\\.)*)"'
+if [[ "$input" =~ $prompt_field ]]; then
+  prompt="${BASH_REMATCH[1]}"
 else
-  prompt="$(printf '%s' "$input" | sed -n 's/.*"prompt"[[:space:]]*:[[:space:]]*"\(.*\)".*/\1/p')"
+  exit 0
 fi
 
 [ -z "$prompt" ] && exit 0

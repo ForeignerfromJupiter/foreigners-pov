@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Foreigner's POV">
+  <defs>
+    <clipPath id="planet"><circle cx="128" cy="128" r="84"/></clipPath>
+    <radialGradient id="shade" cx="38%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1a1230" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#1d1733"/>
+  <g clip-path="url(#planet)">
+    <rect x="40" y="40" width="176" height="176" fill="#e9c9a1"/>
+    <rect x="40" y="62" width="176" height="18" fill="#c98a5a"/>
+    <rect x="40" y="96" width="176" height="12" fill="#dba77a"/>
+    <rect x="40" y="136" width="176" height="22" fill="#b86f45"/>
+    <rect x="40" y="176" width="176" height="14" fill="#d59b6c"/>
+    <circle cx="128" cy="128" r="84" fill="url(#shade)"/>
+  </g>
+  <ellipse cx="158" cy="147" rx="30" ry="18" fill="#f6ead8"/>
+  <circle cx="158" cy="147" r="13" fill="#b33a2b"/>
+  <circle cx="158" cy="147" r="6" fill="#1d1733"/>
+  <circle cx="162" cy="143" r="2.5" fill="#ffffff"/>
+</svg>

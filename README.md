@@ -41,10 +41,10 @@ The router skill works on its own, without the commands, agents, or hook.
 - **Claude Code, skill only:**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ForeignerfromJupiter/foreigners-pov/main/install.sh | bash
+git clone --depth 1 https://github.com/ForeignerfromJupiter/foreigners-pov.git /tmp/foreigners-pov && mkdir -p ~/.claude/skills && cp -R /tmp/foreigners-pov/skills/foreigners-pov ~/.claude/skills/
 ```
 
-This copies the skill to `~/.claude/skills/foreigners-pov`. Don't install both the plugin and the standalone skill; the installer stops if the plugin is already there.
+This copies the skill to `~/.claude/skills/foreigners-pov`. Don't install both the plugin and the standalone skill: the plugin already includes it. To update, delete that folder and run the command again.
 
 ## A 60-second session
 
