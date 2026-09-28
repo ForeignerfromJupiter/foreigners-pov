@@ -35,7 +35,7 @@ Start a new session (or run `/reload-plugins`) and describe a product problem. Y
 
 ### Standalone skill (Claude.ai and other surfaces)
 
-The router skill works on its own, without the commands, agents, or hook.
+The router skill works on its own, without the commands, agents, or hooks.
 
 - **Claude.ai:** download [`foreigners-pov.zip`](https://github.com/ForeignerfromJupiter/foreigners-pov/releases/latest/download/foreigners-pov.zip) from the latest release, then upload it under Skills in Claude.ai's settings. Without a file system, Claude keeps the project brain in the conversation and offers the files when you want to save them.
 - **Claude Code, skill only:**
@@ -46,7 +46,22 @@ git clone --depth 1 https://github.com/ForeignerfromJupiter/foreigners-pov.git /
 
 This copies the skill to `~/.claude/skills/foreigners-pov`. Don't install both the plugin and the standalone skill: the plugin already includes it. To update, delete that folder and run the command again.
 
-## A 60-second session
+## See it work
+
+A second Claude played a first-time founder in 2008 India, building a restaurant app from zero (what later became Zomato). Three moments from that 10-turn session, condensed from the transcript:
+
+**Turn 2. The founder says most people there don't have smartphones.**
+> Then don't build an app yet. Build one menu database people can reach two ways: a simple website and SMS. People already order by phoning the restaurant, so every result ends with its phone number. That's the whole ordering system for v1.
+
+**Turn 4. The founder wants a public leaderboard of top reviewers with "Biryani Expert" badges.**
+> An "expert" badge gives people power over restaurant owners: someone can hint at a bad review unless they eat free. And reviews are parked until someone owns moderation. People there love a ranking, so rank dishes, not people.
+
+**Turn 10. Three months after launch, menu page views drop 40%.**
+> Don't redesign the menu pages yet. Calls held flat while views fell, which fits people calling straight from search results. Check first: a partial week, where the number came from, and one gap that's my own mistake: pages the installed app serves offline never reach the server.
+
+Same plugin, three stages: reframe and find the loophole, catch the harm and link it to a parked decision, then plumbing before pixels.
+
+### And it remembers
 
 A project whose ledger already has gamified badges killed. Condensed from a real run:
 
@@ -114,7 +129,11 @@ Before acting, the router reads the **stage** (idea, discovery, definition, solu
 
 ## Works with your design skills
 
-Foreigner's POV owns the thinking: framing, stage, success criteria, and the directions brief. When visual execution is needed and you have a design or frontend skill installed, it hands that skill the brief and then checks what comes back for divergence, generic-AI patterns, and accessibility. It only generates visuals itself when no design skill is installed.
+Foreigner's POV owns the thinking: framing, stage, success criteria, and the directions brief.
+
+- **Look before we design.** Before any new page, screen, or brand look, it points you to real work first, with a specific search for each: Godly ([recent.design](https://recent.design)), [Land-book](https://land-book.com), and [Awwwards](https://www.awwwards.com) for websites, [Mobbin](https://mobbin.com) for app screens and flows. Send 2 or 3 screenshots or links you like and it builds the brief from them. It never blocks: skip it and it carries on.
+- **Hands off the visuals.** When you have a design or frontend skill installed, it hands that skill the brief, then checks what comes back for divergence, generic-AI patterns, and accessibility. It only builds visuals itself when no design skill is installed.
+- **Hands off other specialist work too,** such as accessibility audits, Figma, analytics, or decks, to a skill you have installed. If none is installed and one would clearly do better, it suggests one: on claude.ai and in the desktop app as an install card, elsewhere by name. It never waits on an install.
 
 ## The project brain
 
@@ -152,6 +171,10 @@ Everything runs locally. The plugin sends nothing anywhere on its own.
 - **Analytics**: if you've connected an analytics or data tool (PostHog, Mixpanel, Amplitude, a warehouse), the metric-drop and retro flows read from it, read-only, and say which query they ran. It never changes tracking or data.
 - **Skills** read and write files in `.foreigners-pov/` in your project.
 
+## How it's tested
+
+The repo ships a 13-case eval suite in `evals/` (run with `claude plugin eval .`). Each case is a real prompt, from a switch-vs-checkbox question to a pre-launch checklist, graded on whether the right thinking showed up at the right stage and nothing extra did. Changes to triggers or modules are checked against it before release.
+
 ## Contributing
 
 Cases are the most valuable contribution. See [CONTRIBUTING.md](CONTRIBUTING.md) for the format and the rules on anonymizing.
@@ -159,7 +182,7 @@ Cases are the most valuable contribution. See [CONTRIBUTING.md](CONTRIBUTING.md)
 ## Troubleshooting
 
 - **Claude asks permission to read files in the plugin folder.** The router loads its module files on demand. The first skill turn pre-approves reads; later turns may ask once. Allow reads from the plugin folder to stop the prompts.
-- **It didn't kick in.** Type `/foreigner:foreigners-pov` followed by your request, or name a command. If you have many design skills installed, say "use design founder" once in the session.
+- **It didn't kick in.** Type `/foreigner:foreigners-pov` followed by your request, or name a command. If you have many design skills installed, say "use Foreigner's POV" once in the session.
 - **Upgrading from `design-founder`:** the plugin was renamed. Existing installs move to `foreigner@foreignerfromjupiter` automatically; if Claude Code says it isn't cached, run `/plugin install foreigner@foreignerfromjupiter` once. Your `.designfounder/` project brain keeps working.
 - **Check your install:** `claude plugin list` should show `foreigner@foreignerfromjupiter` as enabled.
 
