@@ -147,7 +147,7 @@ The cases come from the work of Ashik ([foreignerfromjupiter.com](https://www.fo
 Everything runs locally. The plugin sends nothing anywhere on its own.
 
 - **Session-start hook** (`scripts/session-start.sh`): if the project has `.foreigners-pov/`, prints the stage, parked items, and killed-idea index into Claude's context. Otherwise prints nothing.
-- **Prompt hook** (`scripts/prompt-router.sh`): checks each prompt you send for product and design phrasing (for example "landing page", "switch or checkbox", "onboarding", "launch", "rule builder") and, only on a match, adds one line asking Claude to use the foreigners-pov skill. Nothing is stored or sent. It exists because smaller models with many skills installed often skip skills; with it, Haiku uses the router reliably. To turn it off, set `FOREIGNERS_POV_NO_PROMPT_HOOK=1` in your environment.
+- **Prompt hook** (`scripts/prompt-router.sh`): checks each prompt you send for product and design phrasing (for example "landing page", "switch or checkbox", "onboarding", "launch", "rule builder") and, only on a match, adds one line asking Claude to use the foreigners-pov skill. Nothing is stored or sent. It exists because smaller models with many skills installed often skip skills; with it, Haiku uses the router reliably. To turn it off, switch off **Route design prompts to Foreigner's POV** in `/config`.
 - **Researcher agent**: uses web search and fetch, only when you say yes to research.
 - **Analytics**: if you've connected an analytics or data tool (PostHog, Mixpanel, Amplitude, a warehouse), the metric-drop and retro flows read from it, read-only, and say which query they ran. It never changes tracking or data.
 - **Skills** read and write files in `.foreigners-pov/` in your project.

@@ -3,9 +3,10 @@
 # When a prompt reads like a product or design decision, adds one line asking Claude
 # to use the foreigners-pov skill first. Prints nothing for any other prompt.
 # Smaller models with many skills installed often skip skills; this makes routing reliable.
-# Reads only the prompt from stdin. Stores and sends nothing. Plain bash and grep.
+# Reads only the prompt from stdin and its on/off setting. Stores and sends nothing. Plain bash and grep.
 
-[ -n "${FOREIGNERS_POV_NO_PROMPT_HOOK:-}${DESIGN_FOUNDER_NO_PROMPT_HOOK:-}" ] && exit 0
+# The "Route design prompts" plugin setting (userConfig route_prompts). Unset means on, the default.
+case "${CLAUDE_PLUGIN_OPTION_ROUTE_PROMPTS:-true}" in false|False|FALSE|0|no|off) exit 0 ;; esac
 
 input="$(cat)"
 
