@@ -4,7 +4,8 @@
 # the stage, parked items, and killed ideas. Prints nothing in projects without a brain.
 # Reads only files inside the project's brain folder. Plain bash, no other programs.
 
-root="${CLAUDE_PROJECT_DIR:-$PWD}"
+[ -n "${CLAUDE_PROJECT_DIR:-}" ] || exit 0
+root="$CLAUDE_PROJECT_DIR"
 brain="$root/.foreigners-pov"
 # Projects started before the rename keep their brain in .designfounder/.
 [ -f "$brain/state.md" ] || brain="$root/.designfounder"

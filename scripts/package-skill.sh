@@ -4,7 +4,9 @@
 # Attach the result to a GitHub release; it is not committed to the repo.
 set -euo pipefail
 
-root="$(cd "$(dirname "$0")/.." && pwd)"
+# Run from the repository root: bash scripts/package-skill.sh
+[ -f .claude-plugin/plugin.json ] || { echo "Run this from the repository root." >&2; exit 1; }
+root="$(pwd)"
 out="$root/dist/foreigners-pov.zip"
 
 mkdir -p "$root/dist"
