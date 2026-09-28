@@ -1,7 +1,7 @@
 {
   "name": "foreigner",
   "displayName": "Foreigner's POV",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Foreigner's POV: a designer-founder partner that takes you from a vague idea or stakeholder ask to a shipped product, applying the right thinking at the right stage and remembering what was decided, killed, and why.",
   "author": {
     "name": "Ashik",
@@ -25,5 +25,6 @@
       "description": "Adds one line to product and design prompts asking Claude to use this plugin first. It helps smaller models pick the plugin when many skills are installed. Turn it off if it fires on prompts you don't want.",
       "default": true
     }
-  }
+  },
+  "privacyPolicyUrl": "https://github.com/ForeignerfromJupiter/foreigners-pov/blob/main/PRIVACY.md"
 }

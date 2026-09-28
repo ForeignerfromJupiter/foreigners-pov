@@ -163,6 +163,10 @@ Cases are the most valuable contribution. See [CONTRIBUTING.md](CONTRIBUTING.md)
 - **Upgrading from `design-founder`:** the plugin was renamed. Existing installs move to `foreigner@foreignerfromjupiter` automatically; if Claude Code says it isn't cached, run `/plugin install foreigner@foreignerfromjupiter` once. Your `.designfounder/` project brain keeps working.
 - **Check your install:** `claude plugin list` should show `foreigner@foreignerfromjupiter` as enabled.
 
+## Privacy
+
+The author collects nothing. The plugin keeps its project brain in your own project folder and only sends data out for web research you agree to or analytics tools you connected. Details in [PRIVACY.md](PRIVACY.md).
+
 ## License
 
 MIT
