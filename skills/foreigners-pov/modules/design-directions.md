@@ -8,7 +8,23 @@
 
 **Exits when.** The person picks a direction (or a mix) and it's recorded.
 
-## 1. Write the directions brief
+## 1. Look before designing
+
+Before writing the brief or making any visuals for a new direction, point the person to real work, in one short block. Pick 2 or 3 sources that fit the medium and give a specific search for each:
+
+| Medium | Where to look |
+|---|---|
+| Websites and landing pages | Godly (recent.design), Land-book (land-book.com), Awwwards (awwwards.com) |
+| App screens and flows | Mobbin (mobbin.com) |
+| Brand and identity | Recent's branding section (recent.design) |
+
+- If a design reference tool is connected (for example Mobbin), also show 3 or 4 relevant examples with their links.
+- Ask for 2 or 3 screenshots or links they like, and build the brief from what they pick: name what you'll borrow from each (type, spacing, colour, composition), never copy a layout, text, or assets.
+- Don't block. The ask counts toward the question budget; if nothing comes back, continue with your own directions.
+- Frame it as a way for the person to steer the look, not a promise that the result will be better.
+- Skip this block for a small tweak inside an existing design system, or if references were already shared.
+
+## 2. Write the directions brief
 
 The brief is what you hand to a design skill, or what you follow yourself. Fill every line from `state.md`; ask only for what's missing (max 3 questions).
 
@@ -24,14 +40,15 @@ Constraints: <brand assets, platform, tech stack, who edits it later>
 Accessibility floor: WCAG 2.2 AA contrast and targets; readable at 200% zoom; reduced motion respected
 Deliver: 2 or 3 directions that differ on at least 3 of: layout structure, typography, color system, density, interaction model. Build them as one comparable file (side by side or tabbed), same real content in each.
 Avoid: <the generic-AI checklist below>
+References: <what the person shared or picked, and what to borrow from each>
 ```
 
-## 2. Hand off or build
+## 3. Hand off or build
 
 - **A design skill is installed:** invoke it with the brief as its input. Say which skill in one line. Record it as the visual executor in `state.md`.
 - **None installed:** build the directions yourself as one file (in a repo: an HTML file the person can open; elsewhere: an artifact or code block).
 
-## 3. Divergence check
+## 4. Divergence check
 
 Before showing directions, confirm each pair differs on at least 3 of the five axes:
 
@@ -45,7 +62,7 @@ Before showing directions, confirm each pair differs on at least 3 of the five a
 
 If two directions differ on fewer than 3, replace one.
 
-## 4. Generic-AI checklist (reject on sight)
+## 5. Generic-AI checklist (reject on sight)
 
 - Cream or beige background with a terracotta or burnt orange accent
 - Identical rounded cards in a 3-up grid with an icon on top
@@ -56,7 +73,7 @@ If two directions differ on fewer than 3, replace one.
 - Purple-to-blue gradients, glassmorphism for no reason, emoji as icons
 - Stock phrases: "Elevate", "Seamless", "Unlock", "Crafted with care"
 
-## 5. Crit and recommend
+## 6. Crit and recommend
 
 For each direction: one line on what it's best at, one line on its risk, scored against the success criteria. Then recommend one, say why in two sentences, and say which element from another direction is worth borrowing. Run the silent accessibility check on all of them.
 
