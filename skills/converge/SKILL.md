@@ -6,8 +6,8 @@ argument-hint: [directions, optional]
 allowed-tools: Read Glob Grep
 ---
 
-Read `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
+Read `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
 
-Then run `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/modules/converge.md`. Directions: $ARGUMENTS
+Then run `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/modules/converge.md`. Directions: $ARGUMENTS
 
-If none are given, collect them from this conversation and the `testing` and `parked` entries in `.designfounder/ledger.md`.
+If none are given, collect them from this conversation and the `testing` and `parked` entries in `.foreigners-pov/ledger.md`.

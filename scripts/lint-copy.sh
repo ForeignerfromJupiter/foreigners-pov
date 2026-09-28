@@ -9,7 +9,7 @@ if grep -rn "$(printf '\342\200\224')" --include='*.md' --include='*.json' --inc
   fail=1
 fi
 
-len=$(awk '/^description:/{sub(/^description: "?/,""); sub(/"$/,""); print length($0); exit}' skills/design-founder/SKILL.md)
+len=$(awk '/^description:/{sub(/^description: "?/,""); sub(/"$/,""); print length($0); exit}' skills/foreigners-pov/SKILL.md)
 if [ "$len" -gt 1024 ]; then
   echo "Router description is $len characters; Claude.ai allows 1024." >&2
   fail=1

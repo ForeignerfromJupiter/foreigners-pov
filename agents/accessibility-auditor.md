@@ -1,6 +1,6 @@
 ---
 name: accessibility-auditor
-description: Audits UI code or design files for accessibility (WCAG 2.2 AA) and inclusion issues, and reports only real problems with a fix for each. Use when design-founder needs to check built UI, a generated page, or a large design file.
+description: Audits UI code or design files for accessibility (WCAG 2.2 AA) and inclusion issues, and reports only real problems with a fix for each. Use when foreigners-pov needs to check built UI, a generated page, or a large design file.
 tools: Read, Grep, Glob, Bash
 model: sonnet
 ---

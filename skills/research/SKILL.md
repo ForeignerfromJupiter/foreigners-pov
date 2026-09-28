@@ -6,10 +6,10 @@ allowed-tools: Read Glob Grep
 argument-hint: [assumption or notes]
 ---
 
-Read `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
+Read `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
 
-Then run `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/modules/user-research.md`.
+Then run `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/modules/user-research.md`.
 
 Assumption or notes: $ARGUMENTS
 
-If nothing is given, use the framed problem and open assumptions in `.designfounder/`, or ask for it.
+If nothing is given, use the framed problem and open assumptions in `.foreigners-pov/`, or ask for it.

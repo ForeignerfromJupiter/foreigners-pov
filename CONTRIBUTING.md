@@ -6,7 +6,7 @@ Fixes to modules, rules, and triggers are welcome too. Open an issue first if th
 
 ## Submit a case
 
-1. Fork the repo and add one file: `skills/design-founder/cases/<short-name>.md`.
+1. Fork the repo and add one file: `skills/foreigners-pov/cases/<short-name>.md`.
 2. Use the template below. Keep it under about 100 lines.
 3. Run `bash scripts/lint-copy.sh`.
 4. Open a pull request with a one-line summary of the problem shape (for example "marketplace cold start" or "pricing page drop-off").
@@ -59,8 +59,8 @@ Fixes to modules, rules, and triggers are welcome too. Open an issue first if th
 
 ## Change a module or rule
 
-- Modules live in `skills/design-founder/modules/`. Each has purpose, entry trigger, exit condition, questions, what it writes to the brain, and one example. Keep that shape.
-- The router is `skills/design-founder/SKILL.md`. Keep it under 500 lines and the description under 1024 characters.
+- Modules live in `skills/foreigners-pov/modules/`. Each has purpose, entry trigger, exit condition, questions, what it writes to the brain, and one example. Keep that shape.
+- The router is `skills/foreigners-pov/SKILL.md`. Keep it under 500 lines and the description under 1024 characters.
 - Run the eval suite before opening a pull request that changes triggers:
 
 ```bash

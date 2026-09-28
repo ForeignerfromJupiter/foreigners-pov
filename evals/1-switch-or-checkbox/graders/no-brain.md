@@ -1,5 +1,5 @@
 ---
 type: file_exists
-path: '.designfounder/**'
+path: '.foreigners-pov/**'
 exists: false
 ---

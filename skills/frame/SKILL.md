@@ -6,10 +6,10 @@ argument-hint: [problem or ask]
 allowed-tools: Read Glob Grep
 ---
 
-Read `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
+Read `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
 
-Then run `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/modules/reframe.md` on the problem below. Stop at checkpoint 1 (framing) for confirmation. Once the framing is confirmed, run `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/modules/dissect.md` if the problem is medium or large.
+Then run `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/modules/reframe.md` on the problem below. Stop at checkpoint 1 (framing) for confirmation. Once the framing is confirmed, run `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/modules/dissect.md` if the problem is medium or large.
 
 Problem: $ARGUMENTS
 
-If the problem is empty, use the framed problem from `.designfounder/state.md`, or ask for it.
+If the problem is empty, use the framed problem from `.foreigners-pov/state.md`, or ask for it.

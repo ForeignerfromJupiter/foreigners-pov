@@ -25,7 +25,7 @@
 ## Running it
 
 - One or two items: run inline.
-- Three or more: start one `preflight-runner` agent per item in the same turn so they run in parallel. Each gets the item text and the path to `.designfounder/`. Then merge results into one table.
+- Three or more: start one `preflight-runner` agent per item in the same turn so they run in parallel. Each gets the item text and the path to `.foreigners-pov/`. Then merge results into one table.
 
 ```
 | Item | Result | Why | Next step |

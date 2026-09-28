@@ -7,9 +7,12 @@
   },
   "plugins": [
     {
-      "name": "design-founder",
+      "name": "foreigner",
       "source": "./",
-      "description": "Stage-aware designer-founder partner: reframe, dissect, define good, converge, stress test, pre-flight, retro, with a project brain that remembers killed ideas."
+      "description": "Foreigner's POV: stage-aware designer-founder partner. Reframe, dissect, define good, research, converge, stress test, pre-flight, launch, retro, with a project brain that remembers killed ideas."
     }
-  ]
+  ],
+  "renames": {
+    "design-founder": "foreigner"
+  }
 }

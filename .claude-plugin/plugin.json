@@ -1,14 +1,21 @@
 {
-  "name": "design-founder",
-  "displayName": "Design Founder",
-  "version": "0.3.0",
-  "description": "A designer-founder partner that takes you from a vague idea or stakeholder ask to a shipped product, applying the right thinking at the right stage and remembering what was decided, killed, and why.",
+  "name": "foreigner",
+  "displayName": "Foreigner's POV",
+  "version": "0.4.0",
+  "description": "Foreigner's POV: a designer-founder partner that takes you from a vague idea or stakeholder ask to a shipped product, applying the right thinking at the right stage and remembering what was decided, killed, and why.",
   "author": {
     "name": "Ashik",
     "url": "https://www.foreignerfromjupiter.com/"
   },
-  "homepage": "https://github.com/ForeignerfromJupiter/design-founder",
-  "repository": "https://github.com/ForeignerfromJupiter/design-founder",
+  "homepage": "https://github.com/ForeignerfromJupiter/foreigners-pov",
+  "repository": "https://github.com/ForeignerfromJupiter/foreigners-pov",
   "license": "MIT",
-  "keywords": ["product-design", "ux", "design-thinking", "founder", "product-management", "accessibility"]
+  "keywords": [
+    "product-design",
+    "ux",
+    "design-thinking",
+    "founder",
+    "product-management",
+    "accessibility"
+  ]
 }

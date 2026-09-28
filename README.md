@@ -1,4 +1,6 @@
-# Design Founder
+# Foreigner's POV
+
+*An outsider's point of view on your product: question the brief, check what already exists, and ask "why not just use the giant?" before anything gets built.*
 
 A Claude Code plugin that turns Claude into a designer-founder partner, taking you from a vague idea or stakeholder ask to a shipped product and what you learn after launch. It applies the right thinking at the right stage, instead of every framework at once, and remembers what was decided, killed, and why.
 
@@ -6,7 +8,7 @@ A Claude Code plugin that turns Claude into a designer-founder partner, taking y
 
 - **It encodes one designer's real rules and cases**, not generic principles. Eight rules, each with a concrete trigger, and a case library that shows the reasoning chain behind real decisions.
 - **It's stage-aware.** It reads the stage (idea to post-launch) and the problem size (a label, a flow, a product) before acting. A switch-vs-checkbox question never gets a viability check. Just in time, not just in case.
-- **It learns within a project.** A project brain in `.designfounder/` keeps decisions, killed ideas with the condition that would revive them, parked items, and retros. Suggest something you killed last month and it tells you what happened last time.
+- **It learns within a project.** A project brain in `.foreigners-pov/` keeps decisions, killed ideas with the condition that would revive them, parked items, and retros. Suggest something you killed last month and it tells you what happened last time.
 
 ## Install
 
@@ -15,18 +17,18 @@ A Claude Code plugin that turns Claude into a designer-founder partner, taking y
 In Claude Code:
 
 ```
-/plugin marketplace add ForeignerfromJupiter/design-founder
-/plugin install design-founder@foreignerfromjupiter
+/plugin marketplace add ForeignerfromJupiter/foreigners-pov
+/plugin install foreigner@foreignerfromjupiter
 ```
 
 Or from your shell:
 
 ```bash
-claude plugin marketplace add ForeignerfromJupiter/design-founder
+claude plugin marketplace add ForeignerfromJupiter/foreigners-pov
 ```
 
 ```bash
-claude plugin install design-founder@foreignerfromjupiter
+claude plugin install foreigner@foreignerfromjupiter
 ```
 
 Start a new session (or run `/reload-plugins`) and describe a product problem. You get the router skill, ten commands, four subagents, and two small hooks (see [What it runs](#what-it-runs)).
@@ -35,14 +37,14 @@ Start a new session (or run `/reload-plugins`) and describe a product problem. Y
 
 The router skill works on its own, without the commands, agents, or hook.
 
-- **Claude.ai:** download [`design-founder.zip`](https://github.com/ForeignerfromJupiter/design-founder/releases/latest/download/design-founder.zip) from the latest release, then upload it under Skills in Claude.ai's settings. Without a file system, Claude keeps the project brain in the conversation and offers the files when you want to save them.
+- **Claude.ai:** download [`foreigners-pov.zip`](https://github.com/ForeignerfromJupiter/foreigners-pov/releases/latest/download/foreigners-pov.zip) from the latest release, then upload it under Skills in Claude.ai's settings. Without a file system, Claude keeps the project brain in the conversation and offers the files when you want to save them.
 - **Claude Code, skill only:**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ForeignerfromJupiter/design-founder/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ForeignerfromJupiter/foreigners-pov/main/install.sh | bash
 ```
 
-This copies the skill to `~/.claude/skills/design-founder`. Don't install both the plugin and the standalone skill; the installer stops if the plugin is already there.
+This copies the skill to `~/.claude/skills/foreigners-pov`. Don't install both the plugin and the standalone skill; the installer stops if the plugin is already there.
 
 ## A 60-second session
 
@@ -75,16 +77,16 @@ Each command is also something you can just ask for in plain words. In Claude Co
 
 | Command | What it does |
 |---|---|
-| `/design-founder:stage` | Current stage, size, success criteria, parked items due now, next checkpoint |
-| `/design-founder:frame` | Reframe the problem, then dissect it by motive |
-| `/design-founder:warroom` | Stakeholder war room and a pre-mortem on a concept |
-| `/design-founder:converge` | Score directions against success criteria, pick one, log what we're not building |
-| `/design-founder:preflight` | Pre-flight backlog items in parallel: ready, needs answers, or conflicts |
-| `/design-founder:ledger` | Show or search shipped, killed, parked, and testing ideas |
-| `/design-founder:retro` | Compare a launch to its success criteria and update the ledger |
-| `/design-founder:directions` | Write a directions brief and get 2 or 3 genuinely different visual directions |
-| `/design-founder:research` | Plan interviews to test an assumption (who, questions, what would change your mind), or synthesize notes |
-| `/design-founder:launch` | Pre-launch checklist: measurement on every platform, store rules, remote switches, real devices, day-1 and week-1 checks |
+| `/foreigner:stage` | Current stage, size, success criteria, parked items due now, next checkpoint |
+| `/foreigner:frame` | Reframe the problem, then dissect it by motive |
+| `/foreigner:warroom` | Stakeholder war room and a pre-mortem on a concept |
+| `/foreigner:converge` | Score directions against success criteria, pick one, log what we're not building |
+| `/foreigner:preflight` | Pre-flight backlog items in parallel: ready, needs answers, or conflicts |
+| `/foreigner:ledger` | Show or search shipped, killed, parked, and testing ideas |
+| `/foreigner:retro` | Compare a launch to its success criteria and update the ledger |
+| `/foreigner:directions` | Write a directions brief and get 2 or 3 genuinely different visual directions |
+| `/foreigner:research` | Plan interviews to test an assumption (who, questions, what would change your mind), or synthesize notes |
+| `/foreigner:launch` | Pre-launch checklist: measurement on every platform, store rules, remote switches, real devices, day-1 and week-1 checks |
 
 ## The rules
 
@@ -112,11 +114,11 @@ Before acting, the router reads the **stage** (idea, discovery, definition, solu
 
 ## Works with your design skills
 
-Design Founder owns the thinking: framing, stage, success criteria, and the directions brief. When visual execution is needed and you have a design or frontend skill installed, it hands that skill the brief and then checks what comes back for divergence, generic-AI patterns, and accessibility. It only generates visuals itself when no design skill is installed.
+Foreigner's POV owns the thinking: framing, stage, success criteria, and the directions brief. When visual execution is needed and you have a design or frontend skill installed, it hands that skill the brief and then checks what comes back for divergence, generic-AI patterns, and accessibility. It only generates visuals itself when no design skill is installed.
 
 ## The project brain
 
-On the first medium or large problem in a project, it creates `.designfounder/`:
+On the first medium or large problem in a project, it creates `.foreigners-pov/`:
 
 | File | Holds |
 |---|---|
@@ -126,7 +128,7 @@ On the first medium or large problem in a project, it creates `.designfounder/`:
 | `backlog.md` | Queued items with pre-flight status |
 | `learnings.md` | Retros and patterns that worked |
 
-A session-start hook loads the stage, parked items, and a one-line index of killed ideas, so every session starts knowing where you are. Commit `.designfounder/` with your project; it's the project's memory.
+A session-start hook loads the stage, parked items, and a one-line index of killed ideas, so every session starts knowing where you are. Commit `.foreigners-pov/` with your project; it's the project's memory.
 
 Claude Code doesn't run between sessions. "Background" work means subagents running in parallel during a session, or the checks at session start.
 
@@ -134,9 +136,9 @@ Claude Code doesn't run between sessions. "Background" work means subagents runn
 
 Worked examples that show the reasoning chain: the surface ask, the hidden sub-problems, the questions that cracked it, where the answer was found, and the decision.
 
-- [The multi-step rule engine](skills/design-founder/cases/rule-engine.md): every rule builder assumed one A-or-B branch; real audit logic needed each answer to open the next question.
-- [The onboarding drop-off that wasn't a UI problem](skills/design-founder/cases/onboarding-dropoff.md): two of three OTP failure modes were invisible to tracking.
-- [A Reason To Stop](skills/design-founder/cases/a-reason-to-stop.md): from an offline travel app to daily discovery, with the loophole and the trust layer.
+- [The multi-step rule engine](skills/foreigners-pov/cases/rule-engine.md): every rule builder assumed one A-or-B branch; real audit logic needed each answer to open the next question.
+- [The onboarding drop-off that wasn't a UI problem](skills/foreigners-pov/cases/onboarding-dropoff.md): two of three OTP failure modes were invisible to tracking.
+- [A Reason To Stop](skills/foreigners-pov/cases/a-reason-to-stop.md): from an offline travel app to daily discovery, with the loophole and the trust layer.
 
 The cases come from the work of Ashik ([foreignerfromjupiter.com](https://www.foreignerfromjupiter.com/)), anonymized, with no metrics.
 
@@ -144,11 +146,11 @@ The cases come from the work of Ashik ([foreignerfromjupiter.com](https://www.fo
 
 Everything runs locally. The plugin sends nothing anywhere on its own.
 
-- **Session-start hook** (`scripts/session-start.sh`): if the project has `.designfounder/`, prints the stage, parked items, and killed-idea index into Claude's context. Otherwise prints nothing.
-- **Prompt hook** (`scripts/prompt-router.sh`): checks each prompt you send for product and design phrasing (for example "landing page", "switch or checkbox", "onboarding", "launch", "rule builder") and, only on a match, adds one line asking Claude to use the design-founder skill. Nothing is stored or sent. It exists because smaller models with many skills installed often skip skills; with it, Haiku uses the router reliably. To turn it off, set `DESIGN_FOUNDER_NO_PROMPT_HOOK=1` in your environment.
+- **Session-start hook** (`scripts/session-start.sh`): if the project has `.foreigners-pov/`, prints the stage, parked items, and killed-idea index into Claude's context. Otherwise prints nothing.
+- **Prompt hook** (`scripts/prompt-router.sh`): checks each prompt you send for product and design phrasing (for example "landing page", "switch or checkbox", "onboarding", "launch", "rule builder") and, only on a match, adds one line asking Claude to use the foreigners-pov skill. Nothing is stored or sent. It exists because smaller models with many skills installed often skip skills; with it, Haiku uses the router reliably. To turn it off, set `FOREIGNERS_POV_NO_PROMPT_HOOK=1` in your environment.
 - **Researcher agent**: uses web search and fetch, only when you say yes to research.
 - **Analytics**: if you've connected an analytics or data tool (PostHog, Mixpanel, Amplitude, a warehouse), the metric-drop and retro flows read from it, read-only, and say which query they ran. It never changes tracking or data.
-- **Skills** read and write files in `.designfounder/` in your project.
+- **Skills** read and write files in `.foreigners-pov/` in your project.
 
 ## Contributing
 
@@ -157,8 +159,9 @@ Cases are the most valuable contribution. See [CONTRIBUTING.md](CONTRIBUTING.md)
 ## Troubleshooting
 
 - **Claude asks permission to read files in the plugin folder.** The router loads its module files on demand. The first skill turn pre-approves reads; later turns may ask once. Allow reads from the plugin folder to stop the prompts.
-- **It didn't kick in.** Type `/design-founder:design-founder` followed by your request, or name a command. If you have many design skills installed, say "use design founder" once in the session.
-- **Check your install:** `claude plugin list` should show `design-founder@foreignerfromjupiter` as enabled.
+- **It didn't kick in.** Type `/foreigner:foreigners-pov` followed by your request, or name a command. If you have many design skills installed, say "use design founder" once in the session.
+- **Upgrading from `design-founder`:** the plugin was renamed. Existing installs move to `foreigner@foreignerfromjupiter` automatically; if Claude Code says it isn't cached, run `/plugin install foreigner@foreignerfromjupiter` once. Your `.designfounder/` project brain keeps working.
+- **Check your install:** `claude plugin list` should show `foreigner@foreignerfromjupiter` as enabled.
 
 ## License
 

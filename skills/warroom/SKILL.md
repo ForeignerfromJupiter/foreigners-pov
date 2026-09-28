@@ -6,9 +6,9 @@ argument-hint: [concept]
 allowed-tools: Read Glob Grep
 ---
 
-Read `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
+Read `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.
 
-Then run `${CLAUDE_PLUGIN_ROOT}/skills/design-founder/modules/stress-test.md` on the concept below. Use the `design-founder:war-room` agent if it's available, and send it the concept plus the success criteria and principles from `.designfounder/state.md`.
+Then run `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/modules/stress-test.md` on the concept below. Use the `foreigner:war-room` agent if it's available, and send it the concept plus the success criteria and principles from `.foreigners-pov/state.md`.
 
 Concept: $ARGUMENTS
 
