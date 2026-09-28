@@ -33,10 +33,11 @@ Adapt each line to this product; skip what doesn't apply and say why in one line
 
 ## How to report
 
-Keep the reply under about 350 words:
-1. **The 3 things most likely to block or sink this launch,** specific to this product, each with the fix.
-2. **The rest as one-line checklist items,** only the ones this product needs.
-3. **Offer the full checklist as a file** (for example `docs/launch-checklist.md`) instead of writing it all in the reply.
+Plan backwards from the launch date. Keep the reply under about 350 words:
+1. **What can move the date.** Anything with lead time that has to start now: store testing windows, developer and payment agreements, tax and banking setup, in-app products that need their own review, sender or SMS registration, review queues, anything waiting on a third party. For each: how long it takes and what to do today.
+2. **What gets it rejected at review,** specific to this product, each with the fix.
+3. **The one question that decides the date,** if there is one (for example the developer account type), with your likely answer and what follows from each answer.
+4. **The rest as one-line checklist items,** only what this product needs. Offer the full checklist as a file (for example `docs/launch-checklist.md`) instead of writing it all in the reply.
 
 ## What you can do yourself
 
