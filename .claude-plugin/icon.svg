@@ -1,23 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Foreigner's POV">
   <defs>
-    <clipPath id="planet"><circle cx="128" cy="128" r="84"/></clipPath>
-    <radialGradient id="shade" cx="38%" cy="32%" r="75%">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
-      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#1a1230" stop-opacity="0.45"/>
-    </radialGradient>
+    <clipPath id="card"><rect width="256" height="256" rx="56"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#110c22"/><stop offset=".55" stop-color="#241a47"/><stop offset="1" stop-color="#3a2a66"/></linearGradient>
+    <radialGradient id="glow" cx="128" cy="300" r="214" gradientUnits="userSpaceOnUse"><stop offset=".82" stop-color="#f6c48e" stop-opacity=".55"/><stop offset="1" stop-color="#f6c48e" stop-opacity="0"/></radialGradient>
+    <clipPath id="planet"><circle cx="128" cy="300" r="190"/></clipPath>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#110c22" stop-opacity=".45"/></linearGradient>
   </defs>
-  <rect width="256" height="256" rx="56" fill="#1d1733"/>
-  <g clip-path="url(#planet)">
-    <rect x="40" y="40" width="176" height="176" fill="#e9c9a1"/>
-    <rect x="40" y="62" width="176" height="18" fill="#c98a5a"/>
-    <rect x="40" y="96" width="176" height="12" fill="#dba77a"/>
-    <rect x="40" y="136" width="176" height="22" fill="#b86f45"/>
-    <rect x="40" y="176" width="176" height="14" fill="#d59b6c"/>
-    <circle cx="128" cy="128" r="84" fill="url(#shade)"/>
+  <g clip-path="url(#card)">
+    <rect width="256" height="256" fill="url(#sky)"/>
+    <circle cx="128" cy="300" r="214" fill="url(#glow)"/>
+    <circle cx="54" cy="52" r="2.8" fill="#fff" opacity=".85"/>
+    <circle cx="206" cy="40" r="2" fill="#fff" opacity=".6"/>
+    <circle cx="224" cy="88" r="2.4" fill="#fff" opacity=".7"/>
+    <circle cx="30" cy="100" r="1.8" fill="#fff" opacity=".5"/>
+    <circle cx="140" cy="30" r="1.6" fill="#fff" opacity=".5"/>
+    <path d="M176 56 L179 65 L188 68 L179 71 L176 80 L173 71 L164 68 L173 65 Z" fill="#fff" opacity=".9"/>
+    <g clip-path="url(#planet)">
+      <rect y="100" width="256" height="156" fill="#f3dab4"/>
+      <path d="M-10 140 Q128 108 266 140 L266 156 Q128 124 -10 156 Z" fill="#dfa673"/>
+      <path d="M-10 176 Q128 146 266 176 L266 212 Q128 182 -10 212 Z" fill="#c4744a"/>
+      <path d="M-10 226 Q128 198 266 226 L266 238 Q128 210 -10 238 Z" fill="#e0a877"/>
+      <path d="M-10 250 Q128 222 266 250 L266 270 Q128 242 -10 270 Z" fill="#b5633d"/>
+      <ellipse cx="172" cy="196" rx="21" ry="11" fill="#e39a72" transform="rotate(-6 172 196)"/><ellipse cx="172" cy="196" rx="15" ry="7.5" fill="#c1432e" transform="rotate(-6 172 196)"/>
+      <rect y="100" width="256" height="156" fill="url(#shade)"/>
+    </g>
   </g>
-  <ellipse cx="158" cy="147" rx="30" ry="18" fill="#f6ead8"/>
-  <circle cx="158" cy="147" r="13" fill="#b33a2b"/>
-  <circle cx="158" cy="147" r="6" fill="#1d1733"/>
-  <circle cx="162" cy="143" r="2.5" fill="#ffffff"/>
 </svg>

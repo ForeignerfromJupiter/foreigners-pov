@@ -1,6 +1,10 @@
+<img src=".claude-plugin/icon.svg" alt="Foreigner's POV icon: Jupiter rising over the horizon" width="96" align="left">
+
 # Foreigner's POV
 
 *An outsider's point of view on your product: question the brief, check what already exists, and ask "why not just use the giant?" before anything gets built.*
+
+<br clear="left">
 
 A Claude Code plugin that turns Claude into a designer-founder partner, taking you from a vague idea or stakeholder ask to a shipped product and what you learn after launch. It applies the right thinking at the right stage, instead of every framework at once, and remembers what was decided, killed, and why.
 
