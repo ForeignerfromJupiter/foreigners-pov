@@ -206,7 +206,7 @@ Everything runs locally. The plugin sends nothing anywhere on its own. The hooks
 
 ## How it's tested
 
-The repo ships a 13-case eval suite in `evals/` (run with `claude plugin eval .`). Each case is a real prompt, from a switch-vs-checkbox question to a pre-launch checklist, graded on whether the right thinking showed up at the right stage and nothing extra did. Changes to triggers or modules are checked against it before release.
+The repo ships a 13-case eval suite in `evals/` (run with `claude plugin eval . --scaffold --allow-tools Write Edit`; three cases set up a project brain or data file and need `--scaffold`). Each case is a real prompt, from a switch-vs-checkbox question to a pre-launch checklist, graded on whether the right thinking showed up at the right stage and nothing extra did. Changes to triggers or modules are checked against it before release.
 
 ## Contributing
 

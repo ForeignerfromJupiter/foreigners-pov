@@ -68,5 +68,5 @@ Fixes to modules, rules, and triggers are welcome too. Open an issue first if th
 ```bash
 claude plugin validate . --strict
 bash scripts/lint-copy.sh
-claude plugin eval . --allow-tools Write Edit
+claude plugin eval . --scaffold --allow-tools Write Edit
 ```
