@@ -1,0 +1,5 @@
+# Codex: run this command only when the user calls $foreigner-converge.
+interface:
+  display_name: "Foreigner's POV: converge"
+policy:
+  allow_implicit_invocation: false

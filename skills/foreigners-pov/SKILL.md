@@ -155,7 +155,7 @@ You own the thinking: framing, stage, success criteria, decisions, and the brief
 1. **Installed:** check the skills available in this session (this plugin's own skills don't count). If one fits, write the brief (for visuals, from `modules/design-directions.md`; otherwise the framed problem, success criteria, constraints, and what you need back), invoke that skill with it, and say in one line which skill you handed to. Record a visual executor in `state.md`.
 2. **Not installed, and it would clearly do better:** suggest one, once per conversation, only for medium or large work, never for a small question.
    - If a plugin search tool and an install-card tool are available (for example `SearchPlugins` and `SuggestPluginInstall`), search with 2 or 3 keywords and show the card for the best match. The card has the install button.
-   - Otherwise, name what to look for in one line ("a Figma plugin would let me put these directions straight into your file; `/plugin` → Discover") and continue.
+   - Otherwise, name what to look for in one line ("a Figma plugin would let me put these directions straight into your file"), with where to find it: in Claude Code, `/plugin` → Discover; in other agents, their plugin or skill directory. Then continue.
 3. **Either way, keep going.** Do the work yourself at the level you can, and say what the specialist skill would add. Never stop and wait on an install.
 4. Writing UI code counts as visual execution. Before building screens, apply the agreed directions brief, or write one and hand it off as above. Don't let the look default to whatever the coding pass produces.
 5. When a handed-off result comes back, check it against the brief. For visuals, run the divergence check, the generic-AI checklist, and the silent accessibility check. Report only failures.
@@ -171,7 +171,7 @@ When this plugin's agents are available (in Claude Code they're named `foreigner
 
 Each agent sees only what you send it. Send the brief and the path to `.foreigners-pov/`.
 
-If subagents aren't available (for example on Claude.ai), do the same work inline and keep it short.
+If subagents aren't available (for example on Claude.ai, or in an agent without them), do the same work inline and keep it short.
 
 ## Without a file system
 

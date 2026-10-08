@@ -4,6 +4,8 @@ description: "Run pre-flight on backlog items: ready, needs answers, or conflict
 disable-model-invocation: true
 argument-hint: [item, optional]
 allowed-tools: Read Glob Grep
+metadata:
+  internal: true
 ---
 
 Read `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.

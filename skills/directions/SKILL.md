@@ -4,6 +4,8 @@ description: "Write a directions brief and produce 2 or 3 genuinely different vi
 disable-model-invocation: true
 argument-hint: [what to design]
 allowed-tools: Read Glob Grep
+metadata:
+  internal: true
 ---
 
 Read `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.

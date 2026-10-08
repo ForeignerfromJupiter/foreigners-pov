@@ -1,0 +1,5 @@
+# Codex: run this command only when the user calls $foreigner-ledger.
+interface:
+  display_name: "Foreigner's POV: ledger"
+policy:
+  allow_implicit_invocation: false

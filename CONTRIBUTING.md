@@ -61,6 +61,8 @@ Fixes to modules, rules, and triggers are welcome too. Open an issue first if th
 
 - Modules live in `skills/foreigners-pov/modules/`. Each has purpose, entry trigger, exit condition, questions, what it writes to the brain, and one example. Keep that shape.
 - The router is `skills/foreigners-pov/SKILL.md`. Keep it under 500 lines and the description under 1024 characters.
+- The commands live in `skills/<command>/SKILL.md` (Claude Code). The copies for other agents in `.agents/skills/foreigner-<command>/` are generated: after changing a command, run `bash scripts/build-portable.sh` and commit both. The copy lint fails if they're out of sync.
+- The router runs on many agents, not only Claude Code. Write instructions any agent can follow, and give Claude-only features (subagents, plugin install cards) a fallback.
 - Run the eval suite before opening a pull request that changes triggers:
 
 ```bash

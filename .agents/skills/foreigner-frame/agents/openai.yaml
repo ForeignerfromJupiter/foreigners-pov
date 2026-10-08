@@ -1,0 +1,5 @@
+# Codex: run this command only when the user calls $foreigner-frame.
+interface:
+  display_name: "Foreigner's POV: frame"
+policy:
+  allow_implicit_invocation: false

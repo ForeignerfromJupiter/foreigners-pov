@@ -6,7 +6,7 @@
 
 <br clear="left">
 
-A Claude Code plugin that turns Claude into a designer-founder partner, taking you from a vague idea or stakeholder ask to a shipped product and what you learn after launch. It applies the right thinking at the right stage, instead of every framework at once, and remembers what was decided, killed, and why.
+A plugin for Claude Code, and a skill for Codex, GitHub Copilot, Cursor, Gemini CLI, and 40+ other agents, that turns your AI into a designer-founder partner, taking you from a vague idea or stakeholder ask to a shipped product and what you learn after launch. It applies the right thinking at the right stage, instead of every framework at once, and remembers what was decided, killed, and why.
 
 ## Why it's different
 
@@ -46,7 +46,27 @@ claude plugin install foreigner@foreignerfromjupiter
 
 Start a new session (or run `/reload-plugins`) and describe a product problem. You get the router skill, ten commands, four subagents, and two small hooks (see [What it runs](#what-it-runs)).
 
-### Standalone skill (Claude.ai and other surfaces)
+### Codex, GitHub Copilot, Cursor, Gemini CLI, and 40+ other agents
+
+Foreigner's POV uses the open [Agent Skills](https://agentskills.io) format, so any agent that reads `SKILL.md` files can run it. Install it with the [skills CLI](https://github.com/vercel-labs/skills) (needs Node.js):
+
+```bash
+npx skills add ForeignerfromJupiter/foreigners-pov
+```
+
+It asks which agents to install for. To choose up front, add `-a` once per agent, for example `-a codex -a github-copilot -a cursor`. Add `-g` to install for every project instead of the current one.
+
+You get the router skill and the ten commands, named `foreigner-frame`, `foreigner-launch`, and so on. Call a command by name, for example `$foreigner-frame` in Codex or `/foreigner-frame` in agents that list skills under `/`, or just ask in plain words. The commands only run when you call them.
+
+Optional, and worth it on smaller models: some agents skip skills unless reminded. Add this line to your project's `AGENTS.md`:
+
+```
+For product or design decisions (what to build, UI choices, launches, a metric that dropped), use the foreigners-pov skill before answering or writing code.
+```
+
+The hooks and the four subagents are Claude Code features. Other agents read the project brain when the skill starts and do the subagent work inline.
+
+### Claude.ai, or the skill alone in Claude Code
 
 The router skill works on its own, without the commands, agents, or hooks.
 
@@ -101,7 +121,7 @@ Other things to try in your first two minutes:
 
 ## Commands
 
-Each command is also something you can just ask for in plain words. In Claude Code, commands are prefixed with the plugin name; the short form (for example `/frame`) works when no other command uses that name.
+Each command is also something you can just ask for in plain words. In Claude Code, commands are prefixed with the plugin name; the short form (for example `/frame`) works when no other command uses that name. In other agents, the same commands are named `foreigner-stage`, `foreigner-frame`, and so on.
 
 | Command | What it does |
 |---|---|
@@ -176,7 +196,7 @@ The cases come from the work of Ashik ([foreignerfromjupiter.com](https://www.fo
 
 ## What it runs
 
-Everything runs locally. The plugin sends nothing anywhere on its own.
+Everything runs locally. The plugin sends nothing anywhere on its own. The hooks and the researcher agent below are Claude Code features; in other agents only the skills run.
 
 - **Session-start hook** (`scripts/session-start.sh`): if the project has `.foreigners-pov/`, prints the stage, parked items, and killed-idea index into Claude's context. Otherwise prints nothing.
 - **Prompt hook** (`scripts/prompt-router.sh`): checks each prompt you send for product and design phrasing (for example "landing page", "switch or checkbox", "onboarding", "launch", "rule builder") and, only on a match, adds one line asking Claude to use the foreigners-pov skill. Nothing is stored or sent. It exists because smaller models with many skills installed often skip skills; with it, Haiku uses the router reliably. To turn it off, switch off **Route design prompts to Foreigner's POV** in `/config`.

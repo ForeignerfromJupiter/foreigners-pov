@@ -1,0 +1,5 @@
+# Codex: run this command only when the user calls $foreigner-research.
+interface:
+  display_name: "Foreigner's POV: research"
+policy:
+  allow_implicit_invocation: false

@@ -4,6 +4,8 @@ description: "Run a post-launch retro against the success criteria and update th
 disable-model-invocation: true
 argument-hint: [what shipped]
 allowed-tools: Read Glob Grep
+metadata:
+  internal: true
 ---
 
 Read `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/SKILL.md` and follow it for this whole task, including the question budget and the brain rules.

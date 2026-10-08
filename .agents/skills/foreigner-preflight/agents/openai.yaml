@@ -1,0 +1,5 @@
+# Codex: run this command only when the user calls $foreigner-preflight.
+interface:
+  display_name: "Foreigner's POV: preflight"
+policy:
+  allow_implicit_invocation: false

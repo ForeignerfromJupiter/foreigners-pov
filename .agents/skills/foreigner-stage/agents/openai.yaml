@@ -1,0 +1,5 @@
+# Codex: run this command only when the user calls $foreigner-stage.
+interface:
+  display_name: "Foreigner's POV: stage"
+policy:
+  allow_implicit_invocation: false

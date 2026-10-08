@@ -1,6 +1,6 @@
 # Build brief
 
-**Purpose.** When building from scratch in Claude Code, turn the agreed solution into a spec the coding work follows. Design decides what and why; the code decides how.
+**Purpose.** When building from scratch with a coding agent, turn the agreed solution into a spec the coding work follows. Design decides what and why; the code decides how.
 
 **Enters when.** The agreed solution is about to be coded from scratch, after checkpoint 3 (commit to build).
 
