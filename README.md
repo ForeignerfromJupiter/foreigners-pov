@@ -58,7 +58,7 @@ It asks which agents to install for. To choose up front, add `-a` once per agent
 
 You get the router skill and the ten commands, named `foreigner-frame`, `foreigner-launch`, and so on. Call a command by name, for example `$foreigner-frame` in Codex or `/foreigner-frame` in agents that list skills under `/`, or just ask in plain words. The commands only run when you call them.
 
-Optional, and worth it on smaller models: some agents skip skills unless reminded. Add this line to your project's `AGENTS.md`:
+Recommended: add this line to your project's `AGENTS.md` (or `CLAUDE.md`, `GEMINI.md`, or whatever instructions file your agent reads). Without a routing hook, agents often answer design questions themselves instead of opening the skill. In our tests the line took the skill from triggering on 1 of 3 design prompts to 3 of 3.
 
 ```
 For product or design decisions (what to build, UI choices, launches, a metric that dropped), use the foreigners-pov skill before answering or writing code.
