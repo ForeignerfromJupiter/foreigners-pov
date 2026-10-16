@@ -1,6 +1,6 @@
 ---
 name: foreigner-directions
-description: "Foreigner's POV command. Write a directions brief and produce 2 or 3 genuinely different visual directions, handing execution to an installed design skill when one exists. Run it only when the user calls it by name."
+description: "Foreigner's POV command. Write a directions brief and produce 2 or 3 genuinely different visual directions, building them with its craft rules unless you name a design skill. Run it only when the user calls it by name."
 license: MIT
 disable-model-invocation: true
 argument-hint: "[what to design]"
@@ -16,4 +16,4 @@ Read `../foreigners-pov/SKILL.md` and follow it for this whole task, including t
 
 Then run `../foreigners-pov/modules/design-directions.md` on: what the user wrote with this command
 
-Follow the router's handoff rule: if a design skill is installed, write the brief and invoke that skill with it; only build the directions yourself when none is installed. Run the divergence check, the generic-AI checklist, and the silent accessibility check on whatever comes back.
+Build the directions yourself following `../foreigners-pov/modules/craft.md`. Hand off to a design skill only if the person names one or the work belongs in a design tool. Run the divergence check, the generic-AI checklist, and the silent accessibility check on whatever comes back.

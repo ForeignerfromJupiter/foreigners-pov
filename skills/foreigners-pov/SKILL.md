@@ -1,6 +1,6 @@
 ---
 name: foreigners-pov
-description: "Product and UX design partner. Use this skill before answering or writing code for any question about what to build, how a product or feature should work, or how to design it, including quick UI questions. Use it when someone: wants to build, launch, or redesign a product, app, feature, website, or landing page (\"build me a landing page for my bakery\", \"we're adding X, how do we launch it?\"); asks a UI choice (\"switch or checkbox?\", \"modal or page?\", \"which component?\", missing states); reports a metric that dropped; has a backlog, roadmap, or scope to decide; asks to frame, stress test, prioritize, or review a launch; or plans a feature involving location, money, health, minors, user content, or rewards. It sets the stage, success criteria, and a directions brief, then hands visual execution to an installed design or frontend skill, so run it before those skills. Keeps a project brain in .foreigners-pov/ with decisions and killed ideas. Skip it for pure coding tasks with no design decision."
+description: "Product and UX design partner. Use this skill before answering or writing code for any question about what to build, how a product or feature should work, or how to design it, including quick UI questions. Use it when someone: wants to build, launch, or redesign a product, app, feature, website, or landing page (\"build me a landing page for my bakery\", \"we're adding X, how do we launch it?\"); asks a UI choice (\"switch or checkbox?\", \"modal or page?\", \"which component?\", missing states); reports a metric that dropped; has a backlog, roadmap, or scope to decide; asks to frame, stress test, prioritize, or review a launch; or plans a feature involving location, money, health, minors, user content, or rewards. It sets the stage, success criteria, and a directions brief, then builds the visuals with its own craft rules, so run it before any design or frontend skill. Keeps a project brain in .foreigners-pov/ with decisions and killed ideas. Skip it for pure coding tasks with no design decision."
 license: MIT
 allowed-tools: Read Glob Grep
 ---
@@ -92,7 +92,7 @@ Apply them in this order. Each one names what makes it fire.
 | Harm and ethics | `modules/harm.md` | Location, money, health, minors, user-generated content, or gamification is involved | None of those present |
 | Accessibility and inclusion | `modules/accessibility.md` | Anything is being designed | Never skipped; speaks only on issues |
 | Design directions | `modules/design-directions.md` | Visual direction is open | A brand or design system already decides it |
-| Craft | `modules/craft.md` | You are about to build UI or visual directions yourself (no design skill installed, or asked to build directly) | A design skill is executing, or it's a small edit inside an existing design system |
+| Craft | `modules/craft.md` | You are about to build UI or visual directions (the default for visual work) | The person named a design skill to build it, the work goes into a design tool, or it's a small edit inside an existing design system |
 | Component weighing | `modules/component-weighing.md` | A meaningful UI choice is being made | Obvious or already decided |
 | Operational how | `modules/operational-how.md` | After any big idea is accepted | Execution details already settled |
 | Pre-flight | `modules/preflight.md` | Before any backlog item is built | Item already passed |
@@ -141,11 +141,10 @@ If they go ahead with a new angle, log it as a new ledger entry that links to th
 
 ## When another skill does it better: hand off or suggest
 
-You own the thinking: framing, stage, success criteria, decisions, and the brief. Execution that another skill does better belongs to that skill. This holds for any specialist work, not only visuals:
+You own the thinking: framing, stage, success criteria, decisions, and the brief. You also own the visuals by default: build them with `modules/craft.md`. Hand visual work to another skill only when the person names one, or when it belongs in a design tool (Figma, Canva) and a skill for that tool is installed. Other specialist work that another skill does better belongs to that skill:
 
 | Work | Look for a skill about |
 |---|---|
-| Visual directions, UI, landing pages, frontend | visual design, UI, frontend, landing pages, design systems |
 | Designs in a design tool | Figma, Canva, or the tool the person uses |
 | Auditing a live page or built UI for accessibility | accessibility audit, WCAG, a11y |
 | Funnels, metrics, dashboards, SQL | analytics, data, product tracking |
@@ -158,7 +157,7 @@ You own the thinking: framing, stage, success criteria, decisions, and the brief
    - If a plugin search tool and an install-card tool are available (for example `SearchPlugins` and `SuggestPluginInstall`), search with 2 or 3 keywords and show the card for the best match. The card has the install button.
    - Otherwise, name what to look for in one line ("a Figma plugin would let me put these directions straight into your file"), with where to find it: in Claude Code, `/plugin` → Discover; in other agents, their plugin or skill directory. Then continue.
 3. **Either way, keep going.** Do the work yourself at the level you can, and say what the specialist skill would add. Never stop and wait on an install.
-4. Writing UI code counts as visual execution. Before building screens, apply the agreed directions brief, or write one and hand it off as above. If you build it yourself, follow `modules/craft.md`, including rendering and looking at the result before you show it. Don't let the look default to whatever the coding pass produces.
+4. Writing UI code counts as visual execution. Build screens from the agreed directions brief (write one if there isn't one) and follow `modules/craft.md`, including rendering and looking at the result before you show it. Don't let the look default to whatever the coding pass produces.
 5. When a handed-off result comes back, check it against the brief. For visuals, run the divergence check, the generic-AI checklist, and the silent accessibility check. Report only failures.
 
 ## Subagents

@@ -160,13 +160,13 @@ Before acting, the router reads the **stage** (idea, discovery, definition, solu
 - **A parking lot:** anything that matters later is parked with the stage it belongs to and raised then.
 - **Silent checks:** accessibility, edge cases, and harm run on every design output and speak only when they find something.
 
-## Works with your design skills
+## How it handles visual design
 
-Foreigner's POV owns the thinking: framing, stage, success criteria, and the directions brief.
+Foreigner's POV owns the thinking (framing, stage, success criteria, the directions brief) and, by default, the build.
 
 - **Look before we design.** Before any new page, screen, or brand look, it points you to real work first, with a specific search for each: Godly ([recent.design](https://recent.design)), [Land-book](https://land-book.com), and [Awwwards](https://www.awwwards.com) for websites, [Mobbin](https://mobbin.com) for app screens and flows. Send 2 or 3 screenshots or links you like and it builds the brief from them. It never blocks: skip it and it carries on.
-- **Hands off the visuals.** When you have a design or frontend skill installed, it hands that skill the brief, then checks what comes back for divergence, generic-AI patterns, and accessibility. It only builds visuals itself when no design skill is installed.
-- **Hands off other specialist work too,** such as accessibility audits, Figma, analytics, or decks, to a skill you have installed. If none is installed and one would clearly do better, it suggests one: on claude.ai and in the desktop app as an install card, elsewhere by name. It never waits on an install.
+- **Builds the visuals itself, with craft rules.** It sets a type scale, spacing, and one accent before any section, uses only real content, then renders the page at desktop and phone sizes, looks at it, and fixes the worst problems before showing you. In a blind test of 8 judgements this beat both its old approach and handing off to a popular design skill (it ranked first in 7 of 8). Name a design skill and it hands that skill the brief instead, then checks what comes back for divergence, generic-AI patterns, and accessibility.
+- **Hands off specialist work,** such as accessibility audits, Figma, analytics, or decks, to a skill you have installed. If none is installed and one would clearly do better, it suggests one: on claude.ai and in the desktop app as an install card, elsewhere by name. It never waits on an install.
 
 ## The project brain
 

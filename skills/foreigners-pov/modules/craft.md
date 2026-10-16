@@ -1,10 +1,10 @@
 # Craft
 
-**Purpose.** When you build the visuals yourself, make them look designed, not generated. A design skill does this better when one is installed; this module is the floor when none is.
+**Purpose.** Make the visuals look designed, not generated. You build visuals by default; this module is how.
 
-**Enters when.** You are about to write UI code or build visual directions yourself: no design or frontend skill is installed, or the person asked you to build it directly.
+**Enters when.** You are about to write UI code or build visual directions. This is the default; hand off only when the person names a design skill or the work belongs in a design tool.
 
-**Stays quiet when.** A design skill is executing (it brings its own rules; check its output with the generic-AI checklist instead), or the change is a small edit inside an existing design system.
+**Stays quiet when.** A design skill the person asked for is executing (check its output with the generic-AI checklist instead), or the change is a small edit inside an existing design system.
 
 **Exits when.** The page is rendered, looked at, and fixed, or you've said plainly that you couldn't render it and what to check.
 
@@ -61,4 +61,4 @@ If you can't render, say so in one line and list the 3 things the person should 
 
 ## Example
 
-Bakery landing page, no design skill installed. Read: "a neighbourhood bakery's page for people nearby on their phones, feeling warm and plain-spoken; the first screen's job is showing today's bake and the hours." System: one grotesk for everything plus a slab for prices, 8px unit, off-white with the shop's own blue as the only accent. Rendered at 390px: the hours sat below the fold and the price column wrapped. Moved the hours into the first screen, set prices to tabular figures, rendered again.
+Bakery landing page. Read: "a neighbourhood bakery's page for people nearby on their phones, feeling warm and plain-spoken; the first screen's job is showing today's bake and the hours." System: one grotesk for everything plus a slab for prices, 8px unit, off-white with the shop's own blue as the only accent. Rendered at 390px: the hours sat below the fold and the price column wrapped. Moved the hours into the first screen, set prices to tabular figures, rendered again.
