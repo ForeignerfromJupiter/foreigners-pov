@@ -92,6 +92,7 @@ Apply them in this order. Each one names what makes it fire.
 | Harm and ethics | `modules/harm.md` | Location, money, health, minors, user-generated content, or gamification is involved | None of those present |
 | Accessibility and inclusion | `modules/accessibility.md` | Anything is being designed | Never skipped; speaks only on issues |
 | Design directions | `modules/design-directions.md` | Visual direction is open | A brand or design system already decides it |
+| Craft | `modules/craft.md` | You are about to build UI or visual directions yourself (no design skill installed, or asked to build directly) | A design skill is executing, or it's a small edit inside an existing design system |
 | Component weighing | `modules/component-weighing.md` | A meaningful UI choice is being made | Obvious or already decided |
 | Operational how | `modules/operational-how.md` | After any big idea is accepted | Execution details already settled |
 | Pre-flight | `modules/preflight.md` | Before any backlog item is built | Item already passed |
@@ -157,7 +158,7 @@ You own the thinking: framing, stage, success criteria, decisions, and the brief
    - If a plugin search tool and an install-card tool are available (for example `SearchPlugins` and `SuggestPluginInstall`), search with 2 or 3 keywords and show the card for the best match. The card has the install button.
    - Otherwise, name what to look for in one line ("a Figma plugin would let me put these directions straight into your file"), with where to find it: in Claude Code, `/plugin` → Discover; in other agents, their plugin or skill directory. Then continue.
 3. **Either way, keep going.** Do the work yourself at the level you can, and say what the specialist skill would add. Never stop and wait on an install.
-4. Writing UI code counts as visual execution. Before building screens, apply the agreed directions brief, or write one and hand it off as above. Don't let the look default to whatever the coding pass produces.
+4. Writing UI code counts as visual execution. Before building screens, apply the agreed directions brief, or write one and hand it off as above. If you build it yourself, follow `modules/craft.md`, including rendering and looking at the result before you show it. Don't let the look default to whatever the coding pass produces.
 5. When a handed-off result comes back, check it against the brief. For visuals, run the divergence check, the generic-AI checklist, and the silent accessibility check. Report only failures.
 
 ## Subagents
