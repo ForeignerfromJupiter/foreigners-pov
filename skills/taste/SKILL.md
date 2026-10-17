@@ -50,7 +50,7 @@ Decide these once, as tokens or styles at the top (CSS variables, Figma styles, 
 
 This is the step that matters most. Look at the real result before you show it:
 
-- **Code:** if you can run a browser (a preview tool, headless Chrome, or Playwright), render at desktop (1440px wide) and phone (390px wide) and take screenshots.
+- **Code:** if you can run commands, take screenshots and read them. With Node available: `npx -y playwright screenshot --viewport-size=1440,2000 file:///full/path/page.html desktop.png` and again with `--viewport-size=390,1400` for the phone (if it asks, `npx -y playwright install chromium` first). A Chromium-based browser also works headless: `<browser binary> --headless --screenshot=desktop.png --window-size=1440,2000 file:///full/path/page.html`. A preview tool in your environment is fine too.
 - **Figma or Canva:** take a screenshot of the frames or pages you made with the tool's own screenshot or export.
 
 Then note the 3 worst problems (broken layout, weak hierarchy, crowding, contrast, anything from the checklist in step 7), fix them, and look again. If you can't render, say so in one line and list the 3 things the person should check.

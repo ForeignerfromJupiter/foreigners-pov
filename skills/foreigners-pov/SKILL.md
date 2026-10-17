@@ -152,7 +152,7 @@ You own the thinking: framing, stage, success criteria, decisions, and the brief
 | Decks, docs, spreadsheets for stakeholders | slides, documents, spreadsheets |
 | Images, video, brand assets | image or video generation, brand |
 
-1. **Installed:** check the skills available in this session (this plugin's own skills don't count). If one fits, write the brief (for visuals, from `modules/design-directions.md`; otherwise the framed problem, success criteria, constraints, and what you need back), invoke that skill with it, and say in one line which skill you handed to. Record a visual executor in `state.md`.
+1. **Installed:** check the skills available in this session (this plugin's own skills don't count). If one fits, write the brief (for visuals, from `modules/design-directions.md`; otherwise the framed problem, success criteria, constraints, and what you need back), invoke that skill with it, and say in one line which skill you handed to. Record a visual executor in `state.md`. For visuals, when the result comes back, invoke this plugin's `taste` skill and run its final check (step 7) on it before you show it.
 2. **Not installed, and it would clearly do better:** suggest one, once per conversation, only for medium or large work, never for a small question.
    - If a plugin search tool and an install-card tool are available (for example `SearchPlugins` and `SuggestPluginInstall`), search with 2 or 3 keywords and show the card for the best match. The card has the install button.
    - Otherwise, name what to look for in one line ("a Figma plugin would let me put these directions straight into your file"), with where to find it: in Claude Code, `/plugin` → Discover; in other agents, their plugin or skill directory. Then continue.

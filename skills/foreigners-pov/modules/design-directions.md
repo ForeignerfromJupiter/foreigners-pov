@@ -45,7 +45,7 @@ References: <what the person shared or picked, and what to borrow from each>
 
 ## 3. Hand off or build
 
-- **A design skill is installed:** invoke it with the brief as its input. Say which skill in one line. Record it as the visual executor in `state.md`.
+- **A design skill is installed:** invoke it with the brief as its input. Say which skill in one line. Record it as the visual executor in `state.md`. When it returns, invoke the `taste` skill and run its final check on the result before showing it.
 - **None installed:** build the directions yourself as one file, following the `taste` skill (in a repo: an HTML file the person can open; elsewhere: an artifact or code block).
 
 ## 4. Divergence check
