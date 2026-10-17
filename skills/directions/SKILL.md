@@ -1,6 +1,6 @@
 ---
 name: directions
-description: "Write a directions brief and produce 2 or 3 genuinely different visual directions, building them with its craft rules unless you name a design skill."
+description: "Write a directions brief and produce 2 or 3 genuinely different visual directions, handing execution to an installed design skill when one exists."
 disable-model-invocation: true
 argument-hint: [what to design]
 allowed-tools: Read Glob Grep
@@ -12,4 +12,4 @@ Read `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/SKILL.md` and follow it for th
 
 Then run `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/modules/design-directions.md` on: $ARGUMENTS
 
-Build the directions yourself following `${CLAUDE_PLUGIN_ROOT}/skills/foreigners-pov/modules/craft.md`. Hand off to a design skill only if the person names one or the work belongs in a design tool. Run the divergence check, the generic-AI checklist, and the silent accessibility check on whatever comes back.
+Follow the router's handoff rule: if a design skill is installed, write the brief and invoke that skill with it; only build the directions yourself when none is installed. Run the divergence check, the generic-AI checklist, and the silent accessibility check on whatever comes back.

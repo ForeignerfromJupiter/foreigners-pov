@@ -3,3 +3,4 @@ evals/results/
 *.eval.json
 BUILD_PROMPT.md
 dist/
+launch-kit.md

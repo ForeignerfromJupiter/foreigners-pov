@@ -1,6 +1,6 @@
 # Design directions
 
-**Purpose.** When the visual direction is open, produce 2 or 3 genuinely different directions, compare them side by side, and recommend one. You own the brief and, by default, the build (with `modules/craft.md`).
+**Purpose.** When the visual direction is open, produce 2 or 3 genuinely different directions, compare them side by side, and recommend one. You own the brief; an installed design skill owns the execution when one exists.
 
 **Enters when.** Visual direction is open: a new product, a landing page, a redesign.
 
@@ -26,7 +26,7 @@ Before writing the brief or making any visuals for a new direction, point the pe
 
 ## 2. Write the directions brief
 
-The brief is what you build from, or what you hand to a design skill when one is used. Fill every line from `state.md`; ask only for what's missing (max 3 questions).
+The brief is what you hand to a design skill, or what you follow yourself. Fill every line from `state.md`; ask only for what's missing (max 3 questions).
 
 ```
 Directions brief: <project>
@@ -43,12 +43,10 @@ Avoid: <the generic-AI checklist below>
 References: <what the person shared or picked, and what to borrow from each>
 ```
 
-## 3. Build, or hand off when asked
+## 3. Hand off or build
 
-- **Default: build it yourself.** Read `modules/craft.md` and build the directions following it, as one file (in a repo: an HTML file the person can open; elsewhere: an artifact or code block).
-- **Hand off only when** the person names a design skill, or the work belongs in a design tool (Figma, Canva) and a skill for that tool is installed. Say which skill in one line and record it as the visual executor in `state.md`.
-  - Speak its language. Add a one-line design read per direction ("Reading this as: <kind of page> for <who>, feeling <words>"). If the skill takes settings, set them per direction so the directions really differ. For example, taste-skill (`design-taste-frontend`) takes `DESIGN_VARIANCE`, `MOTION_INTENSITY`, and `VISUAL_DENSITY` from 1 to 10: give each direction its own three values, derived from the brief (a trust-first audience pulls variance and motion down; a playful brand pulls them up; density follows the one job of the page).
-  - If the skill builds one page per call, call it once per direction with that direction's read and settings, then assemble the comparison file yourself.
+- **A design skill is installed:** invoke it with the brief as its input. Say which skill in one line. Record it as the visual executor in `state.md`.
+- **None installed:** build the directions yourself as one file, following the `taste` skill (in a repo: an HTML file the person can open; elsewhere: an artifact or code block).
 
 ## 4. Divergence check
 

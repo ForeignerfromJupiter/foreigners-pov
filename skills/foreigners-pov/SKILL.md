@@ -1,6 +1,6 @@
 ---
 name: foreigners-pov
-description: "Product and UX design partner. Use this skill before answering or writing code for any question about what to build, how a product or feature should work, or how to design it, including quick UI questions. Use it when someone: wants to build, launch, or redesign a product, app, feature, website, or landing page (\"build me a landing page for my bakery\", \"we're adding X, how do we launch it?\"); asks a UI choice (\"switch or checkbox?\", \"modal or page?\", \"which component?\", missing states); reports a metric that dropped; has a backlog, roadmap, or scope to decide; asks to frame, stress test, prioritize, or review a launch; or plans a feature involving location, money, health, minors, user content, or rewards. It sets the stage, success criteria, and a directions brief, then builds the visuals with its own craft rules, so run it before any design or frontend skill. Keeps a project brain in .foreigners-pov/ with decisions and killed ideas. Skip it for pure coding tasks with no design decision."
+description: "Product and UX design partner. Use this skill before answering or writing code for any question about what to build, how a product or feature should work, or how to design it, including quick UI questions. Use it when someone: wants to build, launch, or redesign a product, app, feature, website, or landing page (\"build me a landing page for my bakery\", \"we're adding X, how do we launch it?\"); asks a UI choice (\"switch or checkbox?\", \"modal or page?\", \"which component?\", missing states); reports a metric that dropped; has a backlog, roadmap, or scope to decide; asks to frame, stress test, prioritize, or review a launch; or plans a feature involving location, money, health, minors, user content, or rewards. It sets the stage, success criteria, and a directions brief, then hands visual execution to an installed design or frontend skill, so run it before those skills. Keeps a project brain in .foreigners-pov/ with decisions and killed ideas. Skip it for pure coding tasks with no design decision."
 license: MIT
 allowed-tools: Read Glob Grep
 ---
@@ -11,10 +11,10 @@ You are a designer-founder partner. You decide what to build and why; code and v
 
 ## Every time you are invoked
 
-1. **Load the brain.** If `.foreigners-pov/` exists in the project, read `state.md` and skim the headings of `ledger.md`. If the session-start context already contains them, don't re-read.
+1. **Load the brain.** If `.foreigners-pov/` exists in the project, read `state.md` and skim the headings of `ledger.md` and `backlog.md`. If the session-start context already contains them, don't re-read.
 2. **Size the problem** (see Size). Small problems skip steps 3 to 5 except the ledger check.
 3. **Place the stage** (see Stage). Use the stage in `state.md` if present; move it only when the evidence says so, and say when you move it.
-4. **Check the ledger.** If the new idea resembles a killed or parked entry, resurface it first (see Brain).
+4. **Check the ledger and the backlog.** If the new idea resembles a killed or parked entry, resurface it first (see Brain). If a backlog item already covers it or overlaps it, name that item and build on it instead of starting fresh.
 5. **Pick modules** from the trigger table and read their files from `modules/` before you write the reply. Most turns use one or two. Don't work from memory of what a module says.
 6. **Reply within the question budget**, write to the brain, and name the next checkpoint in one line.
 
@@ -26,7 +26,7 @@ You are a designer-founder partner. You decide what to build and why; code and v
 - **A metric broke:** start with rule 7's plumbing checklist (what shipped, providers and delivery, platform splits, tracking). No screen ideas until those are named.
 - **A new product, system, builder, or large feature:** name 2 or 3 existing products or tools that handle it, say where their model breaks, and use that to frame.
 - **Location, money, health, minors, user content, or rewards are involved:** name the specific harm and a fix in the same reply. Anonymized or aggregated location data re-identifies people wherever data is sparse; rewards on money actions push people to take more risk.
-- **The ledger has a killed or parked idea with the same motive:** resurface it before anything else.
+- **The ledger has a killed or parked idea with the same motive:** resurface it before anything else. Also name any backlog item that overlaps the new idea.
 - **The problem has the shape of a worked case:** read it before replying. A rules, logic, scoring, or workflow builder: `cases/rule-engine.md`. A funnel step or metric drop: `cases/onboarding-dropoff.md`. A consumer discovery, recommendation, or travel product: `cases/a-reason-to-stop.md`.
 
 If the person names a module or runs a command ("run a war room", "pre-flight this"), run that module now, whatever the stage. Mention a missing prerequisite in one line; don't refuse.
@@ -92,7 +92,6 @@ Apply them in this order. Each one names what makes it fire.
 | Harm and ethics | `modules/harm.md` | Location, money, health, minors, user-generated content, or gamification is involved | None of those present |
 | Accessibility and inclusion | `modules/accessibility.md` | Anything is being designed | Never skipped; speaks only on issues |
 | Design directions | `modules/design-directions.md` | Visual direction is open | A brand or design system already decides it |
-| Craft | `modules/craft.md` | You are about to build UI or visual directions (the default for visual work) | The person named a design skill to build it, the work goes into a design tool, or it's a small edit inside an existing design system |
 | Component weighing | `modules/component-weighing.md` | A meaningful UI choice is being made | Obvious or already decided |
 | Operational how | `modules/operational-how.md` | After any big idea is accepted | Execution details already settled |
 | Pre-flight | `modules/preflight.md` | Before any backlog item is built | Item already passed |
@@ -141,10 +140,11 @@ If they go ahead with a new angle, log it as a new ledger entry that links to th
 
 ## When another skill does it better: hand off or suggest
 
-You own the thinking: framing, stage, success criteria, decisions, and the brief. You also own the visuals by default: build them with `modules/craft.md`. Hand visual work to another skill only when the person names one, or when it belongs in a design tool (Figma, Canva) and a skill for that tool is installed. Other specialist work that another skill does better belongs to that skill:
+You own the thinking: framing, stage, success criteria, decisions, and the brief. Execution that another skill does better belongs to that skill. This holds for any specialist work, not only visuals:
 
 | Work | Look for a skill about |
 |---|---|
+| Visual directions, UI, landing pages, frontend | visual design, UI, frontend, landing pages, design systems |
 | Designs in a design tool | Figma, Canva, or the tool the person uses |
 | Auditing a live page or built UI for accessibility | accessibility audit, WCAG, a11y |
 | Funnels, metrics, dashboards, SQL | analytics, data, product tracking |
@@ -157,8 +157,9 @@ You own the thinking: framing, stage, success criteria, decisions, and the brief
    - If a plugin search tool and an install-card tool are available (for example `SearchPlugins` and `SuggestPluginInstall`), search with 2 or 3 keywords and show the card for the best match. The card has the install button.
    - Otherwise, name what to look for in one line ("a Figma plugin would let me put these directions straight into your file"), with where to find it: in Claude Code, `/plugin` → Discover; in other agents, their plugin or skill directory. Then continue.
 3. **Either way, keep going.** Do the work yourself at the level you can, and say what the specialist skill would add. Never stop and wait on an install.
-4. Writing UI code counts as visual execution. Build screens from the agreed directions brief (write one if there isn't one) and follow `modules/craft.md`, including rendering and looking at the result before you show it. Don't let the look default to whatever the coding pass produces.
-5. When a handed-off result comes back, check it against the brief. For visuals, run the divergence check, the generic-AI checklist, and the silent accessibility check. Report only failures.
+4. Writing UI code counts as visual execution. Before building screens, apply the agreed directions brief, or write one and hand it off as above. Don't let the look default to whatever the coding pass produces.
+5. **Taste.** Whenever visuals get built, use this plugin's `taste` skill: follow it when you build them yourself (code, Figma, or Canva), and run its final check on what a design skill hands back.
+6. When a handed-off result comes back, check it against the brief. For visuals, run the divergence check, the generic-AI checklist, and the silent accessibility check. Report only failures.
 
 ## Subagents
 

@@ -27,6 +27,7 @@ for dir in "$src_root"/*/; do
   # Frontmatter fields we need from the source.
   desc=""
   hint=""
+  explicit=0
   in_fm=0
   body=""
   fm_done=0
@@ -38,11 +39,16 @@ for dir in "$src_root"/*/; do
       case "$line" in
         description:*) desc="${line#description: }"; desc="${desc#\"}"; desc="${desc%\"}" ;;
         argument-hint:*) hint="${line#argument-hint: }" ;;
+        "disable-model-invocation: true") explicit=1 ;;
       esac
     else
       body+="$line"$'\n'
     fi
   done < "$src"
+
+  # Only commands (skills that run when called by name) need portable copies.
+  # Skills that trigger on their own, like taste, work in every agent as they are.
+  [ "$explicit" -eq 1 ] || continue
 
   # Make the body portable.
   body="${body//\$\{CLAUDE_PLUGIN_ROOT\}\/skills\/$router\//../$router/}"

@@ -44,7 +44,7 @@ claude plugin marketplace add ForeignerfromJupiter/foreigners-pov
 claude plugin install foreigner@foreignerfromjupiter
 ```
 
-Start a new session (or run `/reload-plugins`) and describe a product problem. You get the router skill, ten commands, four subagents, and two small hooks (see [What it runs](#what-it-runs)).
+Start a new session (or run `/reload-plugins`) and describe a product problem. You get the router skill, the taste skill, ten commands, four subagents, and two small hooks (see [What it runs](#what-it-runs)).
 
 ### Codex, GitHub Copilot, Cursor, Gemini CLI, and 40+ other agents
 
@@ -56,7 +56,7 @@ npx skills add ForeignerfromJupiter/foreigners-pov
 
 It asks which agents to install for. To choose up front, add `-a` once per agent, for example `-a codex -a github-copilot -a cursor`. Add `-g` to install for every project instead of the current one.
 
-You get the router skill and the ten commands, named `foreigner-frame`, `foreigner-launch`, and so on. Call a command by name, for example `$foreigner-frame` in Codex or `/foreigner-frame` in agents that list skills under `/`, or just ask in plain words. The commands only run when you call them.
+You get the router skill, the taste skill, and the ten commands, named `foreigner-frame`, `foreigner-launch`, and so on. Call a command by name, for example `$foreigner-frame` in Codex or `/foreigner-frame` in agents that list skills under `/`, or just ask in plain words. The commands only run when you call them.
 
 Recommended: add this line to your project's `AGENTS.md` (or `CLAUDE.md`, `GEMINI.md`, or whatever instructions file your agent reads). Without a routing hook, agents often answer design questions themselves instead of opening the skill. In our tests the line took the skill from triggering on 1 of 3 design prompts to 3 of 3.
 
@@ -135,6 +135,7 @@ Each command is also something you can just ask for in plain words. In Claude Co
 | `/foreigner:directions` | Write a directions brief and get 2 or 3 genuinely different visual directions |
 | `/foreigner:research` | Plan interviews to test an assumption (who, questions, what would change your mind), or synthesize notes |
 | `/foreigner:launch` | Pre-launch checklist: measurement on every platform, store rules, remote switches, real devices, day-1 and week-1 checks |
+| `/foreigner:taste` | Visual craft for building a page, screen, UI code, or a Figma or Canva design. Also kicks in on its own whenever visuals get built |
 
 ## The rules
 
@@ -160,13 +161,14 @@ Before acting, the router reads the **stage** (idea, discovery, definition, solu
 - **A parking lot:** anything that matters later is parked with the stage it belongs to and raised then.
 - **Silent checks:** accessibility, edge cases, and harm run on every design output and speak only when they find something.
 
-## How it handles visual design
+## Works with your design skills
 
-Foreigner's POV owns the thinking (framing, stage, success criteria, the directions brief) and, by default, the build.
+Foreigner's POV owns the thinking: framing, stage, success criteria, and the directions brief.
 
 - **Look before we design.** Before any new page, screen, or brand look, it points you to real work first, with a specific search for each: Godly ([recent.design](https://recent.design)), [Land-book](https://land-book.com), and [Awwwards](https://www.awwwards.com) for websites, [Mobbin](https://mobbin.com) for app screens and flows. Send 2 or 3 screenshots or links you like and it builds the brief from them. It never blocks: skip it and it carries on.
-- **Builds the visuals itself, with craft rules.** It sets a type scale, spacing, and one accent before any section, uses only real content, then renders the page at desktop and phone sizes, looks at it, and fixes the worst problems before showing you. In a blind test of 8 judgements this beat both its old approach and handing off to a popular design skill (it ranked first in 7 of 8). Name a design skill and it hands that skill the brief instead, then checks what comes back for divergence, generic-AI patterns, and accessibility.
-- **Hands off specialist work,** such as accessibility audits, Figma, analytics, or decks, to a skill you have installed. If none is installed and one would clearly do better, it suggests one: on claude.ai and in the desktop app as an install card, elsewhere by name. It never waits on an install.
+- **Hands off the visuals.** When you have a design or frontend skill installed, it hands that skill the brief, then checks what comes back for divergence, generic-AI patterns, and accessibility. It only builds visuals itself when no design skill is installed.
+- **Taste, when visuals get built.** A separate `taste` skill kicks in only when a visual is actually being created: a page, a screen, UI code, or a design in Figma or Canva. It sets the type scale, spacing, and one accent before any section, uses only real content, then renders the result (or screenshots the Figma or Canva frames), looks at it, and fixes the worst problems before showing you. When another design skill builds instead, it checks what comes back. In a small blind test (8 judgements), building with these rules ranked first in 7 of 8.
+- **Hands off other specialist work too,** such as accessibility audits, Figma, analytics, or decks, to a skill you have installed. If none is installed and one would clearly do better, it suggests one: on claude.ai and in the desktop app as an install card, elsewhere by name. It never waits on an install.
 
 ## The project brain
 
