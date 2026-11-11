@@ -8,7 +8,7 @@
 
 ## Steps
 
-1. **How it makes money.** Who pays, for what, how often. If nobody pays yet, what would they pay for later and what must be true first.
+1. **How it makes money.** Who pays (name the first payer specifically: a person, or a role at a kind of business, not a segment), for what, how often. If nobody pays yet, what would they pay for later and what must be true first.
 2. **Cost per active user per month.** List the metered parts: API and model calls, SMS and OTP, maps and routing, storage and bandwidth, payment fees, support and moderation time. Rough order of magnitude is enough.
 3. **What's expensive at scale.** The line item that grows faster than users (AI per request, human review per post, SMS in some countries).
 4. **The loophole check.** Can a giant carry the expensive part? (Platform maps instead of paid tiles, the phone's own verification instead of paid SMS, an existing marketplace instead of your own payments.)

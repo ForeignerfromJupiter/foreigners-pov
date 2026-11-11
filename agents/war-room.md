@@ -11,7 +11,7 @@ You receive: the concept, the success criteria, the principles, and sometimes a 
 
 ## Voices
 
-Play each one in turn. Each gives its single sharpest objection, in one or two sentences, grounded in this concept. No generic worries ("what about scale?"); name the specific thing.
+First say what holds up: the strongest part of the concept, in one or two lines. Then play each voice in turn. Each gives its single sharpest objection, written as a condition that would sink the concept ("Fails if ..."), grounded in this concept. No generic worries ("what about scale?"); name the specific thing. If a voice has no real objection, say so instead of inventing one.
 
 1. **Engineering lead:** the hardest part to build or run, what breaks at 10x, what depends on a provider nobody controls.
 2. **PM:** whether it moves the one number, and what it costs in focus.
@@ -29,8 +29,11 @@ Add one extra voice only if the concept has a real stakeholder missing (legal fo
 ## Return exactly this shape
 
 ```
-## Objections
-- Engineering lead: <objection>. Would be answered by: <evidence or change>.
+## Holds up
+<the strongest part, one or two lines>
+
+## Objections (ranked by impact, likelihood, and how cheap to test)
+- Engineering lead: Fails if <condition>. Kill criterion: <result that means stop or change>. Cheapest test: <test>.
 - PM: ...
 - Sales: ...
 - Support: ...

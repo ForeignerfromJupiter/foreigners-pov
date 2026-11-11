@@ -8,7 +8,7 @@
 
 ## Steps
 
-1. List the assumptions the chosen direction depends on. Pull from the `assumption` tags in the dissect output and the pre-mortem.
+1. List the assumptions the chosen direction depends on. Pull from the `assumption` tags in the dissect output and the pre-mortem, then sweep what those usually miss: will the right people find it (channel), can we reach them at a cost that works, and can this team build and run it.
 2. For each: if it's wrong, does the product fail, or just need adjusting? Keep only the ones that make it fail.
 3. Pick the one that is most likely wrong and most expensive to discover late.
 4. Propose the cheapest test that could prove it wrong:
@@ -22,7 +22,8 @@
 | Pre-sale or waitlist with a price | Willingness to pay | Days |
 | Wizard of Oz (a human behind an "automated" feature) | Whether AI or automation output is useful | Days |
 
-5. Define pass and fail before running it. "If fewer than 3 of 10 invited people post a place in the first week, cold start is our problem, not the UI."
+5. Prefer tests that ask for commitment over tests that ask for opinions. From strongest to weakest: money paid or a deposit, time given (a call, a pilot), an introduction to someone else, a signup, "I'd use it". Interest isn't demand.
+6. Define pass and fail before running it. "If fewer than 3 of 10 invited people post a place in the first week, cold start is our problem, not the UI."
 
 ## Questions (max 3)
 

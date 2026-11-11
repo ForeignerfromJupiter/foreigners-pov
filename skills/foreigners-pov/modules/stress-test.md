@@ -6,9 +6,15 @@
 
 **Exits when.** Every objection is marked answered, accepted as a risk, or turned into a change, and the pre-mortem's top failure has a guard.
 
+## Before the war room: alternatives
+
+If only one approach has been considered, lay out 2 or 3 first: the smallest that moves the one number, the ideal one, and a lateral one (a different mechanism, often borrowed from another industry). Recommend one in a line and stress test that one. Skip this when the person already chose between options.
+
 ## War room
 
-Run each voice in turn. Each gives its single sharpest objection, not a list of worries. Use the `war-room` agent when available, and send it the concept, success criteria, and principles only.
+Start with what holds up: one or two lines on the strongest part of the concept, so the objections land against its best version.
+
+Then run each voice in turn. Each gives its single sharpest objection, not a list of worries. A voice with nothing real to object says so; never invent a weakness to fill the table. Write each objection as a condition that would sink the concept ("Fails if agency clients email their account manager, not a shared address"), with a kill criterion (the result that means stop or change) and the cheapest test. Rank them by impact, likelihood, and how cheap they are to test. Use the `war-room` agent when available, and send it the concept, success criteria, and principles only.
 
 | Voice | Asks |
 |---|---|
@@ -28,7 +34,8 @@ Add a voice only if the problem has a real stakeholder not on the list (legal fo
 ## Output shape
 
 ```
-Objection (voice): <one sentence>        -> answered | risk accepted | change: <what>
+Holds up: <the strongest part, one or two lines>
+Fails if <condition> (voice). Kill criterion: <result>. Cheapest test: <test>.   -> answered | risk accepted | change: <what>
 ...
 Pre-mortem
 1. <cause>   guard: <signal or change>

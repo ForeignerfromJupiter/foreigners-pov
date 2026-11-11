@@ -16,11 +16,12 @@
    - **Change the constraint.** Is a hidden assumption doing the work? ("it must work offline" was true, but the real loss was never knowing a place existed)
 4. Propose a reframe only if it changes what gets built. Otherwise say "The framing holds" and move on in one line.
 5. Run "why not just use the giant?" on the framed version. If the answer is weak, say so now.
+6. For a new product or idea: who exactly has this problem (a named person, or a role at a specific kind of business), what their workaround costs them today, and what's the narrowest version they'd pay for or change their routine for this month. A category ("small businesses") isn't an answer yet.
 
 ## Questions (max 3, with a likely answer each)
 
-- "Who is this for, and what are they trying to get done? My guess: <X>."
-- "What happens today when they hit this? My guess: they <workaround>."
+- "Who exactly hits this, and when? A specific person or role, not a segment. My guess: <X>."
+- "What do they do about it today, and what does that cost them in time, money, or risk? My guess: they <workaround>, costing <cost>."
 - "Is <reframe> closer to what you mean, or is the original the real problem?"
 
 ## Writes to the brain
