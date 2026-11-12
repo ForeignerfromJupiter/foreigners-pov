@@ -206,6 +206,8 @@ Everything runs locally. The plugin sends nothing anywhere on its own. The hooks
 - **Analytics**: if you've connected an analytics or data tool (PostHog, Mixpanel, Amplitude, a warehouse), the metric-drop and retro flows read from it, read-only, and say which query they ran. It never changes tracking or data.
 - **Skills** read and write files in `.foreigners-pov/` in your project.
 
+The copy in Anthropic's plugin directory comes from the `directory` branch, which leaves out the two hooks and the dev scripts, because the directory only accepts those from verified organizations. Everything else is the same. To get the hooks, install from this repo's marketplace as shown above.
+
 ## How it's tested
 
 The repo ships a 13-case eval suite in `evals/` (run with `claude plugin eval . --scaffold --allow-tools Write Edit`; three cases set up a project brain or data file and need `--scaffold`). Each case is a real prompt, from a switch-vs-checkbox question to a pre-launch checklist, graded on whether the right thinking showed up at the right stage and nothing extra did. Changes to triggers or modules are checked against it before release.

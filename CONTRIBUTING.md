@@ -70,3 +70,12 @@ claude plugin validate . --strict
 bash scripts/lint-copy.sh
 claude plugin eval . --scaffold --allow-tools Write Edit
 ```
+
+## Release to the plugin directory
+
+Anthropic's plugin directory reads the `directory` branch, a copy of main without `hooks/`, `scripts/`, and `evals/` (the directory only accepts hooks and scripts from verified organizations). After a release on main, rebuild and push it:
+
+```bash
+bash scripts/build-directory.sh
+git push origin directory
+```
